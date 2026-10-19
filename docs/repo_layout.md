@@ -9,8 +9,10 @@ syntaxai-matrabhasha/
 ├── README.md                 ← project summary, how to reproduce, team + roles
 ├── prompts/
 │   ├── v0_baseline_prompt.md
-│   ├── v1_explainer_prompt.md    ← includes version history table
-│   ├── v1.1_explainer_prompt.md  ← after error analysis
+│   ├── README.md                 ← version ladder + version history table
+│   ├── v1_short_prompt.md
+│   ├── v2_structured_prompt.md
+│   ├── v3_explainer_prompt.md
 │   ├── reviewer_prompt.md
 │   ├── few_shot_examples.md
 │   └── word_for_word_baseline.md
@@ -48,7 +50,7 @@ syntaxai-matrabhasha/
 2. Easiest way without the command line: on the repo page click **Add file → Upload files**, drag in the folders from this pack, write
    a short message like "Add M2 prompts and test set", **Commit**.
 3. Each member uploads their own outputs and scores the same way, from their own account.
-4. Commit small and often (e.g. "Add pilot outputs T01–T10 condition C"); a single big upload the night before looks weak.
+4. Commit small and often (e.g. "Add pilot outputs T01–T10 condition V1"); a single big upload the night before looks weak.
 
 `CONTRIBUTIONS.md` template:
 
