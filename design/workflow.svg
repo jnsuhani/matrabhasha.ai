@@ -27,16 +27,16 @@
   <text x="158" y="255" font-size="11" fill="#2a7">Yes</text>
   <!-- explainer -->
   <rect x="45" y="280" width="210" height="80" rx="10" fill="#e6f6ec" stroke="#2a8a4a"/>
-  <text x="150" y="303" text-anchor="middle" font-weight="bold">Explainer prompt v1</text>
-  <text x="150" y="322" text-anchor="middle" font-size="12">role + level + term rules</text>
-  <text x="150" y="339" text-anchor="middle" font-size="12">+ 5-section format + example</text>
+  <text x="150" y="303" text-anchor="middle" font-weight="bold">Explainer prompt</text>
+  <text x="150" y="322" text-anchor="middle" font-size="12">latest version (v1 → v2 → v3)</text>
+  <text x="150" y="339" text-anchor="middle" font-size="12">role, level, Hindi + term rules</text>
   <!-- draft -->
   <rect x="65" y="410" width="170" height="80" rx="10" fill="#f3f3f3" stroke="#777"/>
   <text x="150" y="445" text-anchor="middle">Draft answer</text>
-  <text x="150" y="464" text-anchor="middle" font-size="12">5 fixed sections</text>
+  <text x="150" y="464" text-anchor="middle" font-size="12">5 sections (from v2)</text>
   <!-- reviewer -->
   <rect x="335" y="410" width="210" height="80" rx="10" fill="#f1e8fb" stroke="#7a4ac1"/>
-  <text x="440" y="438" text-anchor="middle" font-weight="bold">Reviewer prompt</text>
+  <text x="440" y="438" text-anchor="middle" font-weight="bold">Reviewer prompt (from v2)</text>
   <text x="440" y="457" text-anchor="middle" font-size="12">separate chat, rules R1–R6</text>
   <text x="440" y="474" text-anchor="middle" font-size="12">JSON scores + errors</text>
   <!-- verdict -->
