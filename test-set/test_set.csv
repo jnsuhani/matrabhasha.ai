@@ -1,0 +1,51 @@
+test_id,area,concept,level,must_include_key_points,target_misconception,in_m2_pilot
+T01,Programming,For loop,Beginner,"initialisation, condition, update; repeats a block a fixed number of times",Thinking the condition is checked only once,yes
+T02,Programming,For loop,First-year,"initialisation, condition, update; repeats a block a fixed number of times",Thinking the condition is checked only once,yes
+T03,Programming,While loop,Beginner,condition checked before each repeat; can run zero times; needs update to stop,Confusing while with do-while (runs at least once),no
+T04,Programming,While loop,First-year,condition checked before each repeat; can run zero times; needs update to stop,Confusing while with do-while (runs at least once),no
+T05,Programming,Function,Beginner,named reusable block; parameters/arguments; return value,"Thinking a function runs when it is defined, not when called",no
+T06,Programming,Function,First-year,named reusable block; parameters/arguments; return value,"Thinking a function runs when it is defined, not when called",no
+T07,Programming,Recursion,Beginner,function calls itself; base case; recursive case; call stack,Thinking recursion needs no base case / is always faster than loops,yes
+T08,Programming,Recursion,First-year,function calls itself; base case; recursive case; call stack,Thinking recursion needs no base case / is always faster than loops,yes
+T09,Programming,Array,Beginner,same type elements; contiguous memory; index from 0; fixed size in C,Thinking index starts at 1,yes
+T10,Programming,Array,First-year,same type elements; contiguous memory; index from 0; fixed size in C,Thinking index starts at 1,yes
+T11,Programming,String,Beginner,sequence of characters; in C ends with '\0'; indexing,Thinking a string and a char are the same,no
+T12,Programming,String,First-year,sequence of characters; in C ends with '\0'; indexing,Thinking a string and a char are the same,no
+T13,Programming,Pointer,Beginner,stores memory address; & and * operators; NULL,Thinking a pointer stores the value itself,yes
+T14,Programming,Pointer,First-year,stores memory address; & and * operators; NULL,Thinking a pointer stores the value itself,yes
+T15,Programming,Data types,Beginner,"int, float, char, etc.; size and range; why types matter",Thinking 5/2 gives 2.5 with int operands,no
+T16,Programming,Data types,First-year,"int, float, char, etc.; size and range; why types matter",Thinking 5/2 gives 2.5 with int operands,no
+T17,Programming,Operators and precedence,Beginner,"arithmetic, relational, logical; order of evaluation",Thinking = and == are the same,no
+T18,Programming,Operators and precedence,First-year,"arithmetic, relational, logical; order of evaluation",Thinking = and == are the same,no
+T19,Programming,Scope of a variable,Beginner,local vs global; lifetime; block scope,Thinking a local variable keeps its value after the function ends,no
+T20,Programming,Scope of a variable,First-year,local vs global; lifetime; block scope,Thinking a local variable keeps its value after the function ends,no
+T21,Data structures,Stack,Beginner,"LIFO; push, pop, top; overflow/underflow",Confusing stack with queue order,yes
+T22,Data structures,Stack,First-year,"LIFO; push, pop, top; overflow/underflow",Confusing stack with queue order,yes
+T23,Data structures,Queue,Beginner,"FIFO; enqueue, dequeue; front and rear",Thinking items can be removed from the middle,no
+T24,Data structures,Queue,First-year,"FIFO; enqueue, dequeue; front and rear",Thinking items can be removed from the middle,no
+T25,Data structures,Linked list,Beginner,nodes with data + next pointer; dynamic size; no direct indexing,Thinking it allows O(1) access by index like an array,no
+T26,Data structures,Linked list,First-year,nodes with data + next pointer; dynamic size; no direct indexing,Thinking it allows O(1) access by index like an array,no
+T27,Algorithms,Linear search,Beginner,checks one by one; works on unsorted data; O(n),Thinking it needs sorted data,no
+T28,Algorithms,Linear search,First-year,checks one by one; works on unsorted data; O(n),Thinking it needs sorted data,no
+T29,Algorithms,Binary search,Beginner,needs sorted data; halves the range each step; O(log n),Thinking it works on unsorted data,yes
+T30,Algorithms,Binary search,First-year,needs sorted data; halves the range each step; O(log n),Thinking it works on unsorted data,yes
+T31,Algorithms,Bubble sort,Beginner,"compare adjacent, swap; passes; O(n^2)",Thinking one pass sorts the whole array,no
+T32,Algorithms,Bubble sort,First-year,"compare adjacent, swap; passes; O(n^2)",Thinking one pass sorts the whole array,no
+T33,Algorithms,Time complexity (Big-O),Beginner,"growth of steps with input size; ignores constants; O(1), O(n), O(n^2)",Thinking Big-O gives exact running time in seconds,no
+T34,Algorithms,Time complexity (Big-O),First-year,"growth of steps with input size; ignores constants; O(1), O(n), O(n^2)",Thinking Big-O gives exact running time in seconds,no
+T35,Operating systems,Operating system,Beginner,"manages hardware, processes, memory, files; interface between user and hardware",Thinking the OS is just the desktop/GUI,no
+T36,Operating systems,Operating system,First-year,"manages hardware, processes, memory, files; interface between user and hardware",Thinking the OS is just the desktop/GUI,no
+T37,Operating systems,Process vs program,Beginner,program is a file on disk; process is a program in execution with its own state,Thinking they are the same thing,yes
+T38,Operating systems,Process vs program,First-year,program is a file on disk; process is a program in execution with its own state,Thinking they are the same thing,yes
+T39,Operating systems,"CPU scheduling (FCFS, Round Robin)",Beginner,choosing which process runs next; FCFS order; RR time quantum,Thinking only one process exists at a time,no
+T40,Operating systems,"CPU scheduling (FCFS, Round Robin)",First-year,choosing which process runs next; FCFS order; RR time quantum,Thinking only one process exists at a time,no
+T41,Operating systems,Deadlock,Beginner,processes wait for each other forever; four Coffman conditions,Thinking deadlock is the same as a slow program,yes
+T42,Operating systems,Deadlock,First-year,processes wait for each other forever; four Coffman conditions,Thinking deadlock is the same as a slow program,yes
+T43,DBMS,Database and DBMS,Beginner,organised data; DBMS software manages it; advantages over files,Thinking a DBMS and a database are the same,no
+T44,DBMS,Database and DBMS,First-year,organised data; DBMS software manages it; advantages over files,Thinking a DBMS and a database are the same,no
+T45,DBMS,Primary key,Beginner,uniquely identifies each row; not NULL; one per table,Thinking a primary key can repeat,yes
+T46,DBMS,Primary key,First-year,uniquely identifies each row; not NULL; one per table,Thinking a primary key can repeat,yes
+T47,DBMS,SQL SELECT query,Beginner,SELECT columns FROM table WHERE condition,Thinking SELECT changes the data,no
+T48,DBMS,SQL SELECT query,First-year,SELECT columns FROM table WHERE condition,Thinking SELECT changes the data,no
+T49,DBMS,Normalization,Beginner,"reduce redundancy; split tables; 1NF, 2NF, 3NF idea",Thinking normalization means making data numeric,yes
+T50,DBMS,Normalization,First-year,"reduce redundancy; split tables; 1NF, 2NF, 3NF idea",Thinking normalization means making data numeric,yes
