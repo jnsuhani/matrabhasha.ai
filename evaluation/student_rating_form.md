@@ -15,7 +15,7 @@ For each explanation shown (labelled Version 1, 2, 3 in random order):
 **Last question:** Which version would you prefer to study from? (Version 1 / 2 / 3)
 
 ## Setup tips
-- Pick 4 concepts from the pilot (2 Beginner, 2 First-year). For each, show A, B and C. That's 12 explanations, about 10 minutes for a rater.
+- Pick 4 concepts from the pilot (2 Beginner, 2 First-year). For each, show TR, V1 and V2. That's 12 explanations, about 10 minutes for a rater.
 - In Google Forms, turn off "Collect email addresses".
 - Shuffle which condition is Version 1/2/3 for each concept, and write down the mapping in `evaluation/blind_key.csv` (not shown to raters).
 - Export responses to `evaluation/student_ratings.csv`.
