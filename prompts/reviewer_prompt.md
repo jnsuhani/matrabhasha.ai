@@ -1,6 +1,6 @@
 # Reviewer prompt (second step of the workflow)
 
-Run this in a **separate chat** (or a second Gem/GPT called "Matrabhāsha Reviewer") after the explainer gives an answer.
+Use the reviewer from **v2 onward** (its structure rule R5 assumes the 5-section format). Run it in a **separate chat** (or a second Gem/GPT called "Matrabhāsha Reviewer") after the explainer gives an answer.
 Using a fresh chat matters: a model reviewing its own answer in the same chat tends to approve it.
 
 ```

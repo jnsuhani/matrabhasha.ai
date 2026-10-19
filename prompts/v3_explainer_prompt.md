@@ -1,4 +1,10 @@
-# v1 — Matrabhāsha explainer prompt (system instructions)
+# v3 — Detailed prompt with few-shot example (DRAFT, planned)
+
+> **Draft.** Only adopt v3 after real v2 runs show the problems it fixes. Before using it, edit it so every addition
+> matches a failure you actually logged, and remove anything you didn't need. See `README.md` in this folder.
+
+v3 = v2 + **accuracy and refusal rules**, **analogy guidance** (Indian daily life, say where it breaks) and **one team-written
+few-shot example**.
 
 Paste everything inside the box into the **Instructions** field of the Gemini Gem / Custom GPT, or as the first message in a normal chat.
 Then send only: `Concept: <name> | Level: Beginner` (or `Level: First-year`).
@@ -55,21 +61,16 @@ EXAMPLE
 ```
 
 ## What each part does (say this in your viva)
+Rows marked v1/v2/v3 show which version first added that part.
+
 | Part | Prompt-engineering technique | Problem it fixes from v0 |
 |---|---|---|
-| ROLE | Role prompting, audience awareness | Stiff, bookish tone |
-| LEVELS | Constraint-based prompting | Random depth |
-| LANGUAGE RULES 2–3 | Constraints + output spec | Coined Hindi terms students don't know |
-| LANGUAGE RULE 4 | Instruction against literal translation | Word-for-word Hindi |
-| ACCURACY RULES | Hallucination mitigation, refusal rule | Made-up facts |
-| OUTPUT FORMAT | Structured output | Outputs not comparable |
-| EXAMPLE | Few-shot prompting | Tone and format drift |
+| ROLE (v1) | Role prompting, audience awareness | Stiff, bookish tone |
+| LEVELS (v1, limits in v2) | Constraint-based prompting | Random depth |
+| LANGUAGE RULES 2–3 (v1 keep English, v2 gloss format) | Constraints + output spec | Coined or unexplained terms |
+| LANGUAGE RULE 4 (v1) | Instruction against literal translation | Word-for-word Hindi |
+| ACCURACY RULES (v3) | Hallucination mitigation, refusal rule | Made-up facts, off-topic inputs |
+| OUTPUT FORMAT (v2, analogy guidance v3) | Structured output | Missing parts, outputs not comparable |
+| EXAMPLE (v3) | Few-shot prompting | Tone and format drift |
 
-## Version history
-Record every change here (this is graded as "iteration").
-
-| Version | Date | Who | What changed | Why (which failure from the log) |
-|---|---|---|---|---|
-| v0 | M1 | Team | Baseline | — |
-| v1 | | | First structured prompt | v0 problems above |
-| v1.1 | | | | |
+Version history is in `prompts/README.md`.
