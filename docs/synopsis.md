@@ -2,14 +2,15 @@
 
 > Fill every `[ ]` from your real pilot results. Delete this note before submitting. Target length: 1–2 pages.
 
-**Title:** Matrabhāsha: A Prompt-Engineered Bilingual Explainer for First-Year Computer Science Concepts in Hindi
+**Title:** Matrabhāsha: A Prompt-Engineered Bilingual Explainer for Introductory Computer Science Concepts in Hindi
 **Team:** SyntaxAI (Suhani Jain – leader, Khushi Upadhyay, Amna Khan, Ashima Singh), B.Tech CSE 5th semester, Bennett University
 **Problem ID:** C19 (Bilingual explainer)
 
 ## Abstract
-Many Hindi-medium first-year B.Tech students struggle with CS concepts taught only in English, and machine translation gives
-stiff, word-for-word Hindi that ignores the learner's level. Matrabhāsha is a prompt workflow that explains a first-year CS concept
-in natural, conversational Hindi at two levels (Beginner and First-year), keeping technical terms in English with a short Hindi
+Many Hindi-comfortable learners, such as Hindi-medium first-year B.Tech students, struggle with CS concepts taught only in
+English, and machine translation gives stiff, word-for-word Hindi that ignores what the learner already knows. Matrabhāsha is a
+prompt workflow that explains an introductory CS concept in natural, conversational Hindi at two knowledge levels (Beginner: no
+programming background; Intermediate: knows programming basics), keeping technical terms in English with a short Hindi
 gloss, and adding an everyday analogy, a common misconception and practice questions. A second reviewer prompt checks each answer
 for accuracy, term use, naturalness, level fit and format, and a team member verifies accuracy before use. We built the workflow as
 a no-code Gemini Gem [and Custom GPT] and developed the prompt in versions, from a one-line baseline to a short prompt (v1) and a
@@ -18,10 +19,13 @@ structured prompt (v2), with each change driven by failures found in the previou
 "v2 scored [x.x] vs [y.y] for v1 on ..."]
 
 ## 1. Problem and users
-Primary users are Hindi-medium and Hindi-comfortable first-year B.Tech students; secondary users are teachers/TAs who re-explain
+Primary users are Hindi-comfortable learners of introductory CS at any year or in any programme, with Hindi-medium first-year
+B.Tech students as the main group; secondary users are teachers/TAs who re-explain
 concepts in Hindi. NEP 2020 encourages mother-tongue learning, and UGC guidance on translated books asks that word-to-word output be
 rephrased and that technical terms be kept in English. Existing tools (Google Translate, general chatbots, AICTE's Anuvadini)
 translate text but do not adapt to learner level or add analogies and practice.
+Levels are defined by prior knowledge rather than year of study. (Milestone 1 used "First-year B.Tech" as the second level; it was
+renamed Intermediate so that, for example, a second-year student or a non-B.Tech learner with the same knowledge fits.)
 
 ## 2. Objectives
 1. Develop, in evidence-driven versions, a prompt that produces natural Hindi explanations at two learner levels with a 5-part structure.
@@ -42,7 +46,7 @@ translate text but do not adapt to learner level or add analogies and practice.
 - (Insert `design/workflow.png`.)
 
 ## 4. Evaluation design
-- Test set: 25 first-year CS concepts (programming, data structures, algorithms, OS, DBMS) × 2 levels = 50 cases, plus 6 edge cases.
+- Test set: 25 introductory CS concepts (programming, data structures, algorithms, OS, DBMS) × 2 levels = 50 cases, plus 6 edge cases.
 - Conditions: V0 baseline, TR English + Google Translate, V1 short prompt, V2 structured prompt, V2R v2 + reviewer.
 - Team rubric (1–5, two independent scorers): accuracy, natural Hindi, term handling, level fit, analogy, completeness, practice
   questions; hallucination flag.
