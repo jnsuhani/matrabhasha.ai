@@ -1,6 +1,6 @@
 # Test set
 
-- `test_set.csv`: 25 first-year CS concepts × 2 levels = **50 test cases** (T01–T50).
+- `test_set.csv`: 25 introductory CS concepts × 2 levels (Beginner, Intermediate) = **50 test cases** (T01–T50).
   - `must_include_key_points` is the checklist the human checker uses for accuracy (rubric criterion A).
   - `target_misconception` is a common mistake the answer would ideally address. It's fine if the model picks a different valid one.
   - `in_m2_pilot = yes` marks the **10 concepts (20 cases)** to run before 2 Nov. Run the rest for Milestone 3.
