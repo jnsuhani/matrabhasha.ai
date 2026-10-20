@@ -13,6 +13,15 @@ We improve the prompt step by step, and **each step must be justified by failure
 Also here: `word_for_word_baseline.md` (English answer + Google Translate, the comparison faculty asked for) and
 `few_shot_examples.md` (template for the examples v3 needs).
 
+## Levels
+Levels describe what the learner already knows, not their year or degree, so a second-year student or a non-B.Tech learner
+picks whichever fits.
+- **Beginner:** no programming or CS background yet.
+- **Intermediate:** knows programming basics (variables, loops, functions in C or Python) and wants precise technical depth.
+
+Milestone 1 called the second level "First-year B.Tech". It was renamed to Intermediate on 20 Oct 2026 because a learner's year
+doesn't tell you what they know. Mention this change in the report.
+
 ## The rule: don't skip the evidence step
 1. Run version N on the pilot cases and save every output.
 2. Score them and write down the failures in `evaluation/error_analysis.md` (test id + what went wrong).
