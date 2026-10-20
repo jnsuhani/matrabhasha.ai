@@ -1,7 +1,8 @@
 # Matrabhāsha: prompt and solution design (M2 component 1, 2 marks)
 
 ## 1. What the system does
-**Input:** a first-year CS concept + a level (Beginner or First-year).
+**Input:** an introductory CS concept + a level: Beginner (no programming background) or Intermediate (knows programming
+basics, wants technical depth). Levels are about what the learner knows, not their year or degree.
 **Output:** a natural-Hindi explanation in 5 fixed sections (explanation, analogy, key terms, misconception, practice),
 checked by a second reviewer prompt and a human before it is used.
 

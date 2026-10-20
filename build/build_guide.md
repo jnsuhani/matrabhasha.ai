@@ -20,7 +20,7 @@ has moved, look for "Gems" / "Create a GPT" / "Project instructions".
    use Option 3 or just paste the prompt as the first message of a new chat.)
 2. Open the **Configure** tab.
 3. **Name:** same as above. **Instructions:** the same version as the Gem.
-4. **Conversation starters:** `Concept: Array | Level: Beginner`, `Concept: Recursion | Level: First-year`
+4. **Conversation starters:** `Concept: Array | Level: Beginner`, `Concept: Recursion | Level: Intermediate`
 5. Turn off web browsing and image generation (not needed; keeps answers grounded in the prompt).
 6. Save as **Only me** or **Anyone with the link** (for the demo).
 
