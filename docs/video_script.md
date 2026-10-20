@@ -1,7 +1,8 @@
 # 90–150 second video script (M2 component, 2 marks)
 
 Target: **about 2 minutes**. Record your screen (OBS, Windows Game Bar `Win+G`, or Mac `Cmd+Shift+5`) and record voice over it.
-Split the voice parts across members if you can, so everyone appears.
+**Amna** narrates and records. If you can, let each of the other members appear for a few seconds (for example on the title
+slide or saying the one line about their part), since contribution by every member is assessed.
 
 | Time | On screen | Voice (say it in your own words, Hindi or English) |
 |---|---|---|
