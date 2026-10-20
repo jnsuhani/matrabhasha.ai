@@ -22,7 +22,7 @@ Score 1–5. Use the anchors so two people give similar scores.
 | A | **Technical accuracy** | A clear factual error | Correct but misses a key point from the test set | All `must_include_key_points` correct, no errors |
 | B | **Natural Hindi** | Reads like machine translation | Understandable, a few stiff phrases | Sounds like a teacher speaking |
 | C | **Term handling** | Coined Hindi terms or no English terms | English terms present, glosses missing/unclear | English term + short clear gloss on first use |
-| D | **Level fit** | Wrong level (code for Beginner, too shallow for First-year) | Mostly right, some parts too hard/easy | Exactly right depth and length |
+| D | **Level fit** | Wrong level (code for Beginner, too shallow for Intermediate) | Mostly right, some parts too hard/easy | Exactly right depth and length |
 | E | **Analogy quality** | Missing or misleading | Present but generic | Fits well, Indian context, says where it breaks |
 | F | **Completeness** | Most of the 5 parts missing | 3–4 of the 5 parts | All 5 parts (explanation, analogy, key terms, misconception, practice), whatever the headings |
 | G | **Practice questions** | Missing or unrelated | Present, too easy/hard | 2–3, match level, test understanding |
