@@ -1,7 +1,8 @@
 # Matrabhāsha
 
-A prompt workflow that explains first-year computer science concepts in natural, conversational Hindi at two learner levels
-(Beginner and First-year B.Tech). Technical terms stay in English with a short Hindi gloss, and every answer includes an everyday
+A prompt workflow that explains introductory computer science concepts in natural, conversational Hindi to Hindi-comfortable
+learners at two knowledge levels: **Beginner** (no programming background) and **Intermediate** (knows programming basics, wants
+technical depth), whatever their year or degree. Technical terms stay in English with a short Hindi gloss, and every answer includes an everyday
 analogy, a common misconception and practice questions. A second reviewer prompt checks each answer before a team member verifies it.
 
 Prompt Engineering mini-project, B.Tech CSE 5th semester, Bennett University. Problem Pool ID **C19** (Bilingual explainer).
@@ -11,7 +12,7 @@ Prompt Engineering mini-project, B.Tech CSE 5th semester, Bennett University. Pr
 ![Workflow](design/workflow.png)
 
 ## How it works
-1. The student sends `Concept: <name> | Level: Beginner` (or `First-year`).
+1. The student sends `Concept: <name> | Level: Beginner` (or `Intermediate`).
 2. The **explainer prompt** answers. It is developed in versions (v0 baseline → v1 short → v2 structured → v3 detailed), and each
    version is adopted only after real runs of the previous one show what it gets wrong. See [prompts/README.md](prompts/README.md).
 3. From v2 on, the **reviewer prompt** ([prompts/reviewer_prompt.md](prompts/reviewer_prompt.md)) scores it and returns PASS or REVISE with quoted errors.
