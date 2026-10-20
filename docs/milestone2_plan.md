@@ -22,23 +22,23 @@ any file. Leave `[ ]` until you have the real one.
 | Synopsis (1) | `docs/synopsis.md` (draft, fill in results) |
 | 90–150 s video (2) | `docs/video_script.md` |
 
-## Suggested roles (change as you like)
+## Roles
 | Member | Owns | Also |
 |---|---|---|
 | Suhani (leader) | Build Gems/GPT, keep prompt versions + repo | Scores outputs (scorer 1) |
-| Khushi | Runs baselines A and B, checks test set vs syllabus | Writes 1 few-shot example |
-| Amna | Reviewer runs (D), student rating form, error analysis | Scores outputs (scorer 2) |
-| Ashima | Synopsis, video, slides | Writes 1 few-shot example, edge cases |
+| Khushi | Runs baselines V0 and TR, checks test set vs syllabus | Writes 1 few-shot example |
+| Amna | Video (narration and recording), reviewer runs (V2R), error analysis | Scores outputs (scorer 2) |
+| Ashima | Synopsis, slides, student rating form, edge cases | Writes 1 few-shot example |
 
 Everyone runs a quarter of the pilot cases and commits their own files (contribution evidence).
 
 ## Plan to 2 November
 | Dates | Do | Done when |
 |---|---|---|
-| 19–21 Oct | Check test set against syllabus; build the Gem with v1; create repo | Gem answers a test concept |
-| 22–24 Oct | Pilot runs V0, TR, V1 for 20 cases + edge cases; score them; error analysis 1 | v1 failures logged with test ids |
+| 20 Oct (today) | Check test set against syllabus; build the Gem with v1; repo is already set up | Gem answers a test concept |
+| 21–24 Oct | Pilot runs V0, TR, V1 for 20 cases + edge cases; score them; error analysis 1 | v1 failures logged with test ids |
 | 25–28 Oct | Adopt v2 (edited to fix those failures); run V2 and V2R; score; error analysis 2; send blind student form | Scoring sheet full, ≥5 student responses |
-| 29–31 Oct | Results table + chart; fill synopsis; record video; screenshots | All `[ ]` filled with real numbers |
+| 29–31 Oct | Results table + chart; Ashima fills synopsis; Amna records video; screenshots | All `[ ]` filled with real numbers |
 | 1 Nov | Final check against the table above; submit on LMS | Submitted a day early |
 
 ## Roadmap to Milestone 3 (due 1 Dec 2026, 10 marks)
