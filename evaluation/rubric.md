@@ -8,9 +8,9 @@ Fix this rubric **before** you look at results (the guidelines ask for criteria 
 | V0 | v0 baseline prompt | `prompts/v0_baseline_prompt.md` | M2 pilot |
 | TR | Word-for-word translation | English answer → Google Translate (`prompts/word_for_word_baseline.md`) | M2 pilot |
 | V1 | v1 short prompt | `prompts/v1_short_prompt.md` | M2 pilot |
-| V2 | v2 structured prompt | `prompts/v2_structured_prompt.md`, adopted after V1 error analysis | M2 pilot |
+| V2 | v2 guided prompt | `prompts/v2_guided_prompt.md`, adopted after V1 error analysis | M2 pilot |
 | V2R | v2 + reviewer loop | V2, then reviewer, then one revision if verdict = REVISE | M2 pilot |
-| V3, V3R | v3 detailed prompt (+ reviewer) | `prompts/v3_explainer_prompt.md`, adopted after V2 error analysis | M3 |
+| V3, V3R | v3 final prompt (+ reviewer) | `prompts/v3_explainer_prompt.md`, adopted after V2 error analysis | M3 |
 
 Each new version is run only after the previous one has been scored and its failures logged (see `prompts/README.md`).
 

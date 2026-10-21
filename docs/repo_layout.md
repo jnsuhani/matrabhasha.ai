@@ -11,7 +11,7 @@ syntaxai-matrabhasha/
 │   ├── v0_baseline_prompt.md
 │   ├── README.md                 ← version ladder + version history table
 │   ├── v1_short_prompt.md
-│   ├── v2_structured_prompt.md
+│   ├── v2_guided_prompt.md
 │   ├── v3_explainer_prompt.md
 │   ├── reviewer_prompt.md
 │   ├── few_shot_examples.md

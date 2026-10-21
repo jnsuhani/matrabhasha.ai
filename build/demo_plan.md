@@ -28,7 +28,7 @@ Keep it under 4 minutes. Rehearse once.
 1. **Problem (20 s):** show the M1 baseline recursion output and the Google Translate version. Point at a stiff sentence.
    Then show one real v1 failure from your log and the v2 rule that fixed it (this shows iteration).
 2. **Live run (60 s):** in the Gem (on v2), type `Concept: Stack | Level: Beginner`. Then `Concept: Stack | Level: Intermediate`. Point out the
-   difference in depth, the English terms with Hindi gloss, and the 5 sections.
+   difference in depth and the English terms. (The fixed 5 sections and term glosses only arrive with v3, so don't promise them on v2.)
 3. **Reviewer (45 s):** paste the answer into the Reviewer Gem and show the JSON verdict.
 4. **Robustness (30 s):** type edge case E05 (prompt injection) and show it stays on task.
 5. **Results (45 s):** show your pilot results table/bar chart (V0 vs TR vs V1 vs V2 vs V2R) and one failure case you fixed.

@@ -1,10 +1,13 @@
-# v3 — Detailed prompt with few-shot example (DRAFT, planned)
+# v3 — Final detailed prompt with few-shot example (DRAFT, planned)
 
 > **Draft.** Only adopt v3 after real v2 runs show the problems it fixes. Before using it, edit it so every addition
 > matches a failure you actually logged, and remove anything you didn't need. See `README.md` in this folder.
 
-v3 = v2 + **accuracy and refusal rules**, **analogy guidance** (Indian daily life, say where it breaks) and **one team-written
-few-shot example**.
+v3 is the final, most complete version. v3 = v2 + **level limits** (no code for Beginner, word limits), a **term gloss rule**
+(English term + short Hindi meaning on first use), a **fixed 5-section output format**, **accuracy and refusal rules**,
+**analogy guidance** (Indian daily life, say where it breaks), a **numbers rule** and **one team-written few-shot example**.
+
+The reviewer stays a separate prompt (`reviewer_prompt.md`); it is not part of v3.
 
 Paste everything inside the box into the **Instructions** field of the Gemini Gem / Custom GPT, or as the first message in a normal chat.
 Then send only: `Concept: <name> | Level: Beginner` (or `Level: Intermediate`).
@@ -34,6 +37,7 @@ LANGUAGE RULES
    Example: array (एक ही तरह के डेटा की लाइन)
 4. Do not translate sentence by sentence from English. Think in Hindi.
 5. Code, variable names and keywords stay in English.
+6. Write all numbers as 0-9 digits (not १, २, ३), and use the same style throughout.
 
 ACCURACY RULES
 - Only state things that are standard textbook facts for introductory CS.
@@ -65,12 +69,13 @@ Rows marked v1/v2/v3 show which version first added that part.
 
 | Part | Prompt-engineering technique | Problem it fixes from v0 |
 |---|---|---|
-| ROLE (v1) | Role prompting, audience awareness | Stiff, bookish tone |
-| LEVELS (v1, limits in v2) | Constraint-based prompting | Random depth |
-| LANGUAGE RULES 2–3 (v1 keep English, v2 gloss format) | Constraints + output spec | Coined or unexplained terms |
-| LANGUAGE RULE 4 (v1) | Instruction against literal translation | Word-for-word Hindi |
+| ROLE (v1, Hindi-learner audience v2) | Role prompting, audience awareness | Stiff, bookish tone |
+| LEVELS (v1 level named, v2 defined, v3 limits) | Constraint-based prompting | Random depth, code for beginners |
+| LANGUAGE RULES 2–3 (v2 keep English, v3 gloss format) | Constraints + output spec | Coined or unexplained terms |
+| LANGUAGE RULE 4 (v2) | Instruction against literal translation | Word-for-word Hindi |
+| LANGUAGE RULE 6 (v3) | Output constraint | Mixed numeral styles |
 | ACCURACY RULES (v3) | Hallucination mitigation, refusal rule | Made-up facts, off-topic inputs |
-| OUTPUT FORMAT (v2, analogy guidance v3) | Structured output | Missing parts, outputs not comparable |
+| OUTPUT FORMAT + analogy guidance (v3) | Structured output | Missing parts, outputs not comparable |
 | EXAMPLE (v3) | Few-shot prompting | Tone and format drift |
 
 Version history is in `prompts/README.md`.

@@ -1,7 +1,7 @@
 # Few-shot examples (the team writes these, needed for v3)
 
 Milestone 1 says the 2–3 examples are **written by our team**. So write them yourselves: pick a concept that is
-**not** in the test set (otherwise the test is unfair), and use the exact 5 headings from v2/v3.
+**not** in the test set (otherwise the test is unfair), and use the exact 5 headings from v3.
 
 Suggested example concepts (not in test set): **Variable**, **If-else statement**, **Compiler vs Interpreter**.
 

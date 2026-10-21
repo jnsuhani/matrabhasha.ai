@@ -1,6 +1,7 @@
 # Reviewer prompt (second step of the workflow)
 
-Use the reviewer from **v2 onward** (its structure rule R5 assumes the 5-section format). Run it in a **separate chat** (or a second Gem/GPT called "Matrabhāsha Reviewer") after the explainer gives an answer.
+Use the reviewer from **v2 onward**. Its rules R4 (limits) and R5 (5-section format) describe the target that only v3 asks for,
+so V2 outputs will often score low on R4/R5. That's expected: those low scores are part of the evidence for v3. Run it in a **separate chat** (or a second Gem/GPT called "Matrabhāsha Reviewer") after the explainer gives an answer.
 Using a fresh chat matters: a model reviewing its own answer in the same chat tends to approve it.
 
 ```
@@ -41,7 +42,7 @@ EXPLANATION:
 ## If the verdict is REVISE
 Go back to the explainer chat and send:
 ```
-A reviewer found these problems. Rewrite the full answer fixing only these, same format:
+A reviewer found these problems. Rewrite the full answer fixing only these problems:
 {PASTE THE "errors" LIST}
 ```
 This "generate → review → revise" loop is the **prompt chaining** part of the design.

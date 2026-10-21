@@ -7,7 +7,7 @@ has moved, look for "Gems" / "Create a GPT" / "Project instructions".
 1. Go to https://gemini.google.com and sign in (a personal Google account is safest; college accounts sometimes block Gems).
 2. In the left sidebar open **Gems** (or "Explore Gems") → **New Gem**.
 3. **Name:** `Matrabhāsha – Hindi CS Explainer`
-4. **Instructions:** paste the box from `prompts/v1_short_prompt.md`. You start with v1. When the team adopts v2 (and later v3),
+4. **Instructions:** paste the box from `prompts/v1_short_prompt.md` (two lines). You start with v1. When the team adopts v2 (and later v3),
    edit the Gem and replace the instructions with the new version. For v3, paste your team's few-shot example in place of
    `{PASTE ONE TEAM-WRITTEN EXAMPLE HERE}`.
 5. Click **Save**. Test it: type `Concept: Stack | Level: Beginner`.

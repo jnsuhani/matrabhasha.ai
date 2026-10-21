@@ -13,7 +13,7 @@ Prompt Engineering mini-project, B.Tech CSE 5th semester, Bennett University. Pr
 
 ## How it works
 1. The student sends `Concept: <name> | Level: Beginner` (or `Intermediate`).
-2. The **explainer prompt** answers. It is developed in versions (v0 baseline → v1 short → v2 structured → v3 detailed), and each
+2. The **explainer prompt** answers. It is developed in versions (v0 baseline → v1 short → v2 guided → v3 final), and each
    version is adopted only after real runs of the previous one show what it gets wrong. See [prompts/README.md](prompts/README.md).
 3. From v2 on, the **reviewer prompt** ([prompts/reviewer_prompt.md](prompts/reviewer_prompt.md)) scores it and returns PASS or REVISE with quoted errors.
 4. On REVISE the explainer rewrites once; a team member checks accuracy before the answer is used.
