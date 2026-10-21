@@ -13,15 +13,15 @@ The one big task ("explain this in Hindi") is split into smaller prompt tasks. T
 | Step | Who/what | Prompt technique |
 |---|---|---|
 | 1. Read input, check it's a valid CS concept and level | Explainer prompt (v3) | Input validation, refusal rule |
-| 2. Write explanation at the right depth | Explainer prompt (v1 level, v2 limits) | Role + audience-aware prompting, level constraints |
-| 3. Handle technical terms | Explainer prompt (v1 keep English, v2 gloss) | Constraint: English term + Hindi gloss |
-| 4. Keep format fixed | Explainer prompt (v2 format, v3 example) | Structured output, few-shot example |
+| 2. Write explanation at the right depth | Explainer prompt (v1 level, v2 level definitions, v3 limits) | Role + audience-aware prompting, level constraints |
+| 3. Handle technical terms | Explainer prompt (v2 keep English, v3 gloss) | Constraint: English term + Hindi gloss |
+| 4. Keep format fixed | Explainer prompt (v3 format + example) | Structured output, few-shot example |
 | 5. Check accuracy, terms, tone, level, format | Reviewer prompt (separate chat) | Prompt chaining, LLM-as-judge, JSON output |
 | 6. Fix flagged problems | Explainer prompt (revision message) | Self-refinement from feedback |
 | 7. Final accuracy check | Team member | Human oversight |
 
 ## 3. Workflow diagram
-Image version: `workflow.png` (ready for slides/report) and `workflow.svg` (editable). It shows the full planned workflow; the input check arrives with v3 and the reviewer from v2, so v1 is just "input → explainer → answer".
+Image version: `workflow.png` (ready for slides/report) and `workflow.svg` (editable). It shows the full planned workflow; the input check and 5-section format arrive with v3 and the reviewer from v2, so v1 is just "input → explainer → answer".
 
 ```mermaid
 flowchart TD
@@ -29,7 +29,7 @@ flowchart TD
     V -- No --> Q[Ask to clarify, in Hindi]
     Q --> U
     V -- Yes --> E[Explainer prompt<br/>latest version v1 / v2 / v3]
-    E --> O[Draft answer<br/>5 sections from v2]
+    E --> O[Draft answer<br/>5 sections from v3]
     O --> R[Reviewer prompt<br/>separate chat, JSON scores R1-R6]
     R --> D{Verdict}
     D -- REVISE --> F[Send errors back to explainer<br/>rewrite once]
@@ -43,9 +43,9 @@ Each version keeps everything from the one before and adds only what the previou
 
 ```mermaid
 flowchart LR
-    V0[v0 baseline<br/>one line] -->|M1 problems| V1[v1 short<br/>+ role, natural Hindi,<br/>level, keep English terms]
-    V1 -->|v1 error analysis| V2[v2 structured<br/>+ level limits, term gloss,<br/>5-section format]
-    V2 -->|v2 error analysis| V3[v3 detailed<br/>+ accuracy/refusal rules,<br/>analogy guidance, few-shot example]
+    V0[v0 baseline<br/>one line] -->|M1 problems| V1[v1 short<br/>+ teacher role,<br/>learner level]
+    V1 -->|v1 error analysis| V2[v2 guided<br/>+ natural Hindi, keep English terms,<br/>level definitions]
+    V2 -->|v2 error analysis| V3[v3 final<br/>+ level limits, term gloss, 5-section format,<br/>accuracy/refusal rules, analogy guidance,<br/>few-shot example]
     V2 -.-> R[Reviewer prompt<br/>add-on from v2]
     V3 -.-> R
 ```
@@ -60,7 +60,7 @@ flowchart LR
     T[Pilot: 10 concepts x 2 levels] --> V0[V0 baseline]
     T --> TR[TR: English + Google Translate]
     T --> V1[V1 short prompt]
-    V1 --> EA1[Score + error analysis] --> V2[V2 structured prompt]
+    V1 --> EA1[Score + error analysis] --> V2[V2 guided prompt]
     V2 --> V2R[V2 + reviewer loop]
     V2R --> EA2[Score + error analysis] --> V3[V3 in M3,<br/>full 50 cases, 3 models]
     V0 & TR & V1 & V2 & V2R --> S1[Team rubric<br/>2 scorers, 7 criteria]

@@ -12,4 +12,5 @@ Explain the concept of {CONCEPT} in Hindi for a student.
 - No analogy, no misconception, no practice questions.
 - Format changes from run to run, so outputs are hard to compare.
 
-These problems are why v1 adds a role, natural-Hindi and level instructions, and the rule to keep English terms. Later versions add more only when real runs show a need (see `README.md`).
+v1 fixes only the first one in a small way: it adds a teacher role and the learner level. The other problems stay open on purpose,
+and later versions add a fix only when real runs show the problem is still there (see `README.md`).
