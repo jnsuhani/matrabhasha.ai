@@ -1,13 +1,12 @@
 # v0 — Baseline prompt (from Milestone 1)
 
-This is the simple prompt from Milestone 1 (Q18). Keep it unchanged so you can show how much each later version improves on it.
+This is the simple baseline prompt. It was changed from Milestone 1's (Q18) `Explain the concept of {CONCEPT} in Hindi for a student.` to add the learner level, so every condition is compared at the same level.
 
 ```
 Explain <concept> in Hindi for a <level> learner.
 ```
 
 **Known problems seen in the M1 sample output (recursion, ChatGPT):**
-- No learner level, so depth is random.
 - Coins a Hindi word ("पुनरावर्तन") that students never use in class.
 - No analogy, no misconception, no practice questions.
 - Format changes from run to run, so outputs are hard to compare.
