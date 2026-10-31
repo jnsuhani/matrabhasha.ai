@@ -3,7 +3,7 @@
 This is the simple prompt from Milestone 1 (Q18). Keep it unchanged so you can show how much each later version improves on it.
 
 ```
-Explain the concept of {CONCEPT} in Hindi for a student.
+Explain <concept> in Hindi for a <level> learner.
 ```
 
 **Known problems seen in the M1 sample output (recursion, ChatGPT):**
