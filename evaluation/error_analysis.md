@@ -2,6 +2,25 @@
 
 Fill one section per prompt version, from **real scored outputs only**. The next version must be built from this list.
 
+## v0 baseline (from V0 pilot runs)
+
+### Amna's cases (T42, T45, T46, T49, T50 · Gemini Flash, no Gem · 2026-10-31)
+Outputs: `outputs/v0/`. Log rows: `V0-T42` … `V0-T50` in `experiment_log.csv`. Prompt: `Explain <concept> in Hindi for a <level> learner`. Counts are out of these 5 runs. A reading of the outputs, not a score.
+
+| Test id | What went wrong | Rubric criterion | How often (x of 5) | Addressed in |
+|---|---|---|---|---|
+| All 5 | **No fixed structure:** no practice questions and no misconception section in any answer | F Completeness, G Practice questions | 5 of 5 | v3 format |
+| T42, T49, T50 | **Target misconception not addressed:** deadlock vs slow program never separated (T42); T49 adds an ML feature-scaling note that brings in "normalization = making data numeric" instead of correcting it; T50 silent | A Technical accuracy, F Completeness | 3 of 5 | v3: name and correct the misconception |
+| T42, T46, T50 | **Accuracy errors:** "Ignition" for Ignorance (ostrich approach) in T42; "3 मुख्य शर्तें" heading followed by "दो मुख्य नियमों" in T46; "अद्वितीय (Atomic)" and a two-table split that loses the many-to-many link in T50 | A Technical accuracy (hallucination = Y for T42, T50) | 3 of 5 | v3 accuracy rule; reviewer |
+| T42, T49, T50 | **Term handling:** coined or Sanskritised terms ("चक्रवात" for circular, सामान्यीकरण, प्राथमिक कुंजी, संक्रमक/संक्रमित निर्भरता) and mixed script ("पूर्वemption") | B Natural Hindi, C Term handling | 3 of 5 | v2: keep English terms, natural Hindi |
+| T49 | **Level fit:** partial and transitive dependency given to a Beginner | D Level fit | 1 of 5 | v2 level definitions |
+| T45 | **Key point missing:** "one per table" | A Technical accuracy | 1 of 5 | v3 key-point rule |
+
+Areas where v0 had **no** real problem:
+- All 5 in Devanagari, no Roman Hinglish.
+- No code given to Beginners (T45, T49); T46 used SQL only at Intermediate.
+- Every answer had a concrete example (bridge, roll number, teacher table), and most key points were present (T42, T46, T50 complete).
+
 ## v1 failures (from V1 pilot runs)
 
 ### Suhani's cases (T01, T02, T07, T08, T09 · Gemini Flash · 2026-10-31)
