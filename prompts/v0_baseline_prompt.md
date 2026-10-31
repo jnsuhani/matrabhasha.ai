@@ -11,5 +11,5 @@ Explain <concept> in Hindi for a <level> learner.
 - No analogy, no misconception, no practice questions.
 - Format changes from run to run, so outputs are hard to compare.
 
-v1 fixes only the first one in a small way: it adds a teacher role and the learner level. The other problems stay open on purpose,
+v1 adds only a teacher role. The problems above stay open on purpose,
 and later versions add a fix only when real runs show the problem is still there (see `README.md`).
