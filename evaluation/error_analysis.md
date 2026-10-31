@@ -25,22 +25,22 @@ Areas where v1 had **no** real problem (write them too, so v2 doesn't add rules 
 - Analogies were present for every Beginner case (park laps, mirrors, ice tray), and T09's ice-tray analogy fit well.
 
 ### Khushi's cases (T10, T13, T14, T21, T22 · Gemini Flash · 2026-11-01)
-Outputs: `outputs/v1/`. Log rows: `V1-T10` … `V1-T22` in `experiment_log.csv`. Counts are out of these 5 runs. T13, T14, T21 and T22 end at a bare `---` and may be cut off in copying; Khushi to verify against her chats.
+Outputs: `outputs/v1/`. Log rows: `V1-T10` … `V1-T22` in `experiment_log.csv`. Counts are out of these 5 runs. The first copies of T13, T14, T21 and T22 were cut off; Khushi replaced them with complete answers from new runs on 2026-11-01, and this section describes those.
 
 | Test id | What went wrong | Rubric criterion | How often (x of 5) | Fix to try in v2 |
 |---|---|---|---|---|
-| T10, T22 | **Script not controlled:** both Intermediate answers in Roman Hinglish, the Beginner ones in Devanagari | B Natural Hindi, C Term handling | 2 of 5 | v2: natural Hindi in Devanagari, English technical terms kept |
+| T10, T13 | **Script not controlled:** answered in Roman Hinglish, the other three in Devanagari | B Natural Hindi, C Term handling | 2 of 5 | v2: natural Hindi in Devanagari, English technical terms kept |
 | T13 | **Levels not defined:** C code given to a Beginner (T21 had none). Intermediate depth was fine in T10, T14, T22 | D Level fit | 1 of 5 | v2: level definitions; v3: no code for Beginner |
 | All 5 | **No fixed structure:** no practice questions in any answer, no misconception section, long greetings | F Completeness, G Practice questions | 5 of 5 | v3: fixed 5-section format |
-| T13, T21 | **Required key points missing:** `*` as dereference and NULL in T13; overflow/underflow in T21 | A Technical accuracy | 2 of 5 | v3: cover every key point; check against `must_include_key_points` |
+| T13, T14, T21 | **Required key points missing:** NULL in T13 and T14 (T14 only offers it in the closing question); overflow/underflow in T21 | A Technical accuracy | 3 of 5 | v3: cover every key point; check against `must_include_key_points` |
 | T10, T21, T22 | **Target misconception not addressed:** index-from-1 never named (T10); stack never contrasted with queue (T21, T22). T13/T14 answer theirs only by implication | A Technical accuracy, F Completeness | 3 of 5 | v3: name the misconception and correct it directly |
 | T10 | **Accuracy:** calls a Python list an array | A Technical accuracy | 1 of 5 | v3: accuracy rule; reviewer checks facts |
 
 Areas where v1 had **no** real problem:
 - English technical terms kept in all 5, no coined Hindi terms.
-- Both Beginner answers had a fitting analogy (house address, plates); T14 and T22 covered every key point.
+- Every answer had a fitting analogy or example (room number, hotel room, plates and books); T22 covered every key point and T14 all but NULL.
 
-**Across both members (10 runs):** Roman script 3 of 10, code for Beginners 3 of 10, no practice questions 10 of 10, key points missing 5 of 10. The same patterns appear in both sets, which supports the v2 and v3 changes.
+**Across both members (10 runs):** Roman script 3 of 10, code for Beginners 3 of 10, no practice questions 10 of 10, key points missing 6 of 10. The same patterns appear in both sets, which supports the v2 and v3 changes.
 
 ## v2 failures (from V2 / V2R pilot runs)
 
@@ -97,7 +97,6 @@ Outputs: `outputs/v2/`. Log rows: `V2-T10` … `V2-T21`. T22 v2 not in the repo 
 | T14 | **Accuracy:** says the OS allocates bytes for a variable | A Technical accuracy | 1 of 4 | v3: accuracy rule; reviewer checks facts |
 | T13, T14, T21 | **Typos and odd wording:** stray Arabic letter in "अصल" (T13), "पत्ता" for पता and "डिफ़रेंस (Dereferencing)" (T14), "चूड़ियों के कंगन" (T21) | B Natural Hindi | 3 of 4 | v3: tone rule; reviewer checks language |
 
-To verify: v2 T10's headings read `### ##`; check whether that is how Gemini showed it.
 
 ## v3 failures (M3)
 | Test id | What went wrong | Rubric criterion | How often | Fix / limitation to report |
