@@ -77,7 +77,7 @@ ratings are not done yet, so the table shows failure counts, not scores.
 | Theatrical opener ("अरे…") | 0 | 1 | 6 |
 | Edge cases handled correctly (of 6) | not run | 3 | 2 |
 
-**Reviewer pilot (T01, V2 answer, run by Suhani):** verdict REVISE with 4 errors (code at Beginner level, 348 words against the
+**Reviewer pilot (T01, V2 answer):** the team ran the reviewer once, on one V2 answer, as a test. It gave a verdict of REVISE with 4 errors (code at Beginner level, 348 words against the
 250 limit, missing the 5 sections, analogy limit not stated). These match failures we found by hand. It missed the clumsy
 ordinals "2रा, 3रा" and the missing target misconception, so the human check stays. Full V3R runs on the final prompt are
 planned for Milestone 3.
@@ -105,6 +105,16 @@ scored rubrics yet. Accuracy did not improve from v0 to v2 (3 to 4 factual error
 (T08, T46), and the reviewer is weak on naturalness and on which misconception is addressed. Next: finalise v3 with the format,
 no-code, key-point, accuracy, scope, level and role rules; run v3 with the reviewer loop (V3R) on the full 50-case test set on
 ChatGPT, Gemini and Claude; score with the rubric (two scorers); collect blind student ratings; final report and video.
+
+## Team contributions
+All four members ran their own 5 pilot cases under V0, V1 and V2 and logged them.
+
+- **Suhani Jain (leader):** Gemini Gems, Git repository, pilot runs.
+- **Khushi Upadhyay:** syllabus check of the test set, pilot runs.
+- **Amna Khan:** pilot runs, video narration.
+- **Ashima Singh:** pilot runs, edge cases E01 to E06, slides.
+
+The error analysis and this synopsis were compiled from everyone's logged runs.
 
 ## References
 1. Bennett University, Prompt Engineering Mini-Project Guidelines, 2026.
