@@ -14,8 +14,7 @@ syntaxai-matrabhasha/
 │   ├── v2_guided_prompt.md
 │   ├── v3_explainer_prompt.md
 │   ├── reviewer_prompt.md
-│   ├── few_shot_examples.md
-│   └── word_for_word_baseline.md
+│   └── few_shot_examples.md
 ├── test-set/
 │   ├── test_set.csv
 │   └── edge_cases.csv

@@ -22,7 +22,7 @@ The prototype is a Gemini Gem (plus a Custom GPT / Claude Project for comparison
 
 ## Reproduce the evaluation
 - Test set: [test-set/test_set.csv](test-set/test_set.csv) (25 concepts × 2 levels) and [test-set/edge_cases.csv](test-set/edge_cases.csv).
-- Conditions: V0 baseline, TR English + Google Translate, V1, V2, V2R (v2 + reviewer); V3 and V3R in Milestone 3.
+- Conditions: V0 baseline, V1, V2, V2R (v2 + reviewer); V3 and V3R in Milestone 3.
 - Rubric and forms: [evaluation/](evaluation/). Raw model outputs go in [outputs/](outputs/), copied exactly.
 - Pilot and demo steps: [build/demo_plan.md](build/demo_plan.md).
 

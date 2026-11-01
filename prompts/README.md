@@ -12,8 +12,7 @@ final prompt.
 | v3 | `v3_explainer_prompt.md` | Final version: level limits, term gloss rule, fixed 5-section format, accuracy/refusal rules, analogy guidance, numbers rule, team-written few-shot example | Draft, adopt after v2 error analysis |
 | Reviewer | `reviewer_prompt.md` | Second prompt that checks the latest version's output (prompt chaining) | Ready, used from v2 on |
 
-Also here: `word_for_word_baseline.md` (English answer + Google Translate, the comparison faculty asked for) and
-`few_shot_examples.md` (template for the examples v3 needs).
+Also here: `few_shot_examples.md` (template for the examples v3 needs).
 
 ## Levels
 Levels describe what the learner already knows, not their year or degree, so a second-year student or a non-B.Tech learner

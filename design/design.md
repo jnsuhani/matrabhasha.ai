@@ -58,13 +58,12 @@ the team actually finds.
 ```mermaid
 flowchart LR
     T[Pilot: 10 concepts x 2 levels] --> V0[V0 baseline]
-    T --> TR[TR: English + Google Translate]
     T --> V1[V1 short prompt]
     V1 --> EA1[Score + error analysis] --> V2[V2 guided prompt]
     V2 --> V2R[V2 + reviewer loop]
     V2R --> EA2[Score + error analysis] --> V3[V3 in M3,<br/>full 50 cases, 3 models]
-    V0 & TR & V1 & V2 & V2R --> S1[Team rubric<br/>2 scorers, 7 criteria]
-    TR & V1 & V2 --> S2[Blind student ratings]
+    V0 & V1 & V2 & V2R --> S1[Team rubric<br/>2 scorers, 7 criteria]
+    V0 & V1 & V2 --> S2[Blind student ratings]
 ```
 
 ## 6. Interface

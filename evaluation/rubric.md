@@ -6,7 +6,6 @@ Fix this rubric **before** you look at results (the guidelines ask for criteria 
 | Code | Condition | How it's made | When |
 |---|---|---|---|
 | V0 | v0 baseline prompt | `prompts/v0_baseline_prompt.md` | M2 pilot |
-| TR | Word-for-word translation | English answer → Google Translate (`prompts/word_for_word_baseline.md`) | M2 pilot |
 | V1 | v1 short prompt | `prompts/v1_short_prompt.md` | M2 pilot |
 | V2 | v2 guided prompt | `prompts/v2_guided_prompt.md`, adopted after V1 error analysis | M2 pilot |
 | V2R | v2 + reviewer loop | V2, then reviewer, then one revision if verdict = REVISE | M2 pilot |
