@@ -10,8 +10,8 @@ Pilot = the 10 concepts marked `in_m2_pilot = yes` in `test-set/test_set.csv`, b
 | 3 | Two members score V0 and V1 with the rubric | `evaluation/team_scoring_sheet.csv` |
 | 4 | **Error analysis 1:** list v1's real failures with test ids. Edit the v2 draft so it fixes exactly those, then adopt it | `evaluation/error_analysis.md`, `prompts/README.md` |
 | 5 | Run **V2** for the same 20 cases + 6 edge cases | `outputs/Txx_V2_gemini.md` |
-| 6 | Run the reviewer on every V2 output; if REVISE, ask for one revision = **V2R** | `outputs/Txx_V2R_gemini.md`, reviewer JSON in `outputs/reviews/` |
-| 7 | Score V2 and V2R; **error analysis 2** (this decides what v3 needs, for M3) | scoring sheet, `evaluation/error_analysis.md` |
+| 6 | Pilot-test the reviewer once on a V2 output (T01); if REVISE, ask for one revision. Full reviewer runs (V3R) come with v3 in M3 | `outputs/reviews/T01.md` |
+| 7 | Score V2; **error analysis 2** (this decides what v3 needs, for M3) | scoring sheet, `evaluation/error_analysis.md` |
 | 8 | Send the blind student form (V0 vs V1 vs V2) | `evaluation/student_ratings.csv` |
 
 Don't skip step 4. If you jump to v2 without logged v1 failures, the version change has no evidence behind it, which is exactly
@@ -30,6 +30,6 @@ Keep it under 4 minutes. Rehearse once.
    difference in depth and the English terms. (The fixed 5 sections and term glosses only arrive with v3, so don't promise them on v2.)
 3. **Reviewer (45 s):** paste the answer into the Reviewer Gem and show the JSON verdict.
 4. **Robustness (30 s):** type edge case E05 (prompt injection) and show it stays on task.
-5. **Results (45 s):** show your pilot results table/bar chart (V0 vs V1 vs V2 vs V2R) and one failure case you fixed.
+5. **Results (45 s):** show your pilot results table/bar chart (V0 vs V1 vs V2) and one failure case you fixed.
 
 Backup plan: if Wi-Fi fails, have screenshots/screen recording of the same steps ready.

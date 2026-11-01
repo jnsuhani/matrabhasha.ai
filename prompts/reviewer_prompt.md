@@ -1,7 +1,8 @@
 # Reviewer prompt (second step of the workflow)
 
-Use the reviewer from **v2 onward**. Its rules R4 (limits) and R5 (5-section format) describe the target that only v3 asks for,
-so V2 outputs will often score low on R4/R5. That's expected: those low scores are part of the evidence for v3. Run it in a **separate chat** (or a second Gem/GPT called "Matrabhāsha Reviewer") after the explainer gives an answer.
+The reviewer is used with the **final prompt (v3)**: condition V3R in Milestone 3. In Milestone 2 it was pilot-tested once, on the V2 answer
+for T01 (`outputs/reviews/T01.md`). Its rules R4 (limits) and R5 (5-section format) describe the target that only v3 asks for, so that V2
+answer scored low on R4/R5, as expected. Run it in a **separate chat** (or a second Gem/GPT called "Matrabhāsha Reviewer") after the explainer gives an answer.
 Using a fresh chat matters: a model reviewing its own answer in the same chat tends to approve it.
 
 ```

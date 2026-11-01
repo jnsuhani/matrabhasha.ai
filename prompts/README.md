@@ -10,7 +10,7 @@ final prompt.
 | v1 | `v1_short_prompt.md` | Two lines: teacher role + learner level, nothing else | Ready to run |
 | v2 | `v2_guided_prompt.md` | Natural Hindi (not word-for-word), keep English terms, what each level means | Draft, adopt after v1 error analysis |
 | v3 | `v3_explainer_prompt.md` | Final version: level limits, term gloss rule, fixed 5-section format, accuracy/refusal rules, analogy guidance, numbers rule, team-written few-shot example | Draft, adopt after v2 error analysis |
-| Reviewer | `reviewer_prompt.md` | Second prompt that checks the latest version's output (prompt chaining) | Ready, used from v2 on |
+| Reviewer | `reviewer_prompt.md` | Second prompt that checks the latest version's output (prompt chaining) | Ready; used with v3 (V3R, M3). Pilot-tested once on V2 T01 in M2 |
 
 Also here: `few_shot_examples.md` (template for the examples v3 needs).
 

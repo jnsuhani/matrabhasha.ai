@@ -21,7 +21,7 @@ The one big task ("explain this in Hindi") is split into smaller prompt tasks. T
 | 7. Final accuracy check | Team member | Human oversight |
 
 ## 3. Workflow diagram
-Image version: `workflow.png` (ready for slides/report) and `workflow.svg` (editable). It shows the full planned workflow; the input check and 5-section format arrive with v3 and the reviewer from v2, so v1 is just "input → explainer → answer".
+Image version: `workflow.png` (ready for slides/report) and `workflow.svg` (editable). It shows the full planned workflow; the input check, 5-section format and reviewer loop arrive with v3 (the reviewer was pilot-tested once on a V2 answer in M2), so v1 is just "input → explainer → answer".
 
 ```mermaid
 flowchart TD
@@ -46,8 +46,7 @@ flowchart LR
     V0[v0 baseline<br/>one line] -->|M1 problems| V1[v1 short<br/>+ teacher role,<br/>learner level]
     V1 -->|v1 error analysis| V2[v2 guided<br/>+ natural Hindi, keep English terms,<br/>level definitions]
     V2 -->|v2 error analysis| V3[v3 final<br/>+ level limits, term gloss, 5-section format,<br/>accuracy/refusal rules, analogy guidance,<br/>few-shot example]
-    V2 -.-> R[Reviewer prompt<br/>add-on from v2]
-    V3 -.-> R
+    V3 -.-> R[Reviewer prompt<br/>used with v3; pilot-tested on V2 T01]
 ```
 
 The arrows are the evidence steps: a version is only adopted after the previous one has been run, scored and its failures
@@ -60,9 +59,9 @@ flowchart LR
     T[Pilot: 10 concepts x 2 levels] --> V0[V0 baseline]
     T --> V1[V1 short prompt]
     V1 --> EA1[Score + error analysis] --> V2[V2 guided prompt]
-    V2 --> V2R[V2 + reviewer loop]
-    V2R --> EA2[Score + error analysis] --> V3[V3 in M3,<br/>full 50 cases, 3 models]
-    V0 & V1 & V2 & V2R --> S1[Team rubric<br/>2 scorers, 7 criteria]
+    V2 --> EA2[Score + error analysis] --> V3[V3 + reviewer loop V3R in M3,<br/>full 50 cases, 3 models]
+    V2 -.-> RP[Reviewer pilot<br/>1 case: T01]
+    V0 & V1 & V2 --> S1[Team rubric<br/>2 scorers, 7 criteria]
     V0 & V1 & V2 --> S2[Blind student ratings]
 ```
 

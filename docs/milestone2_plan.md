@@ -27,7 +27,7 @@ any file. Leave `[ ]` until you have the real one.
 |---|---|---|
 | Suhani (leader) | Build Gems/GPT, keep prompt versions + repo | Scores outputs (scorer 1) |
 | Khushi | Checks test set vs syllabus | Writes 1 few-shot example |
-| Amna | Video (narration and recording), reviewer runs (V2R), error analysis | Scores outputs (scorer 2) |
+| Amna | Video (narration and recording), reviewer pilot run (T01), error analysis | Scores outputs (scorer 2) |
 | Ashima | Synopsis, slides, student rating form, edge cases | Writes 1 few-shot example |
 
 Everyone runs a quarter of the pilot cases and commits their own files (contribution evidence).
@@ -37,7 +37,7 @@ Everyone runs a quarter of the pilot cases and commits their own files (contribu
 |---|---|---|
 | 20 Oct (today) | Check test set against syllabus; build the Gem with v1; repo is already set up | Gem answers a test concept |
 | 21–24 Oct | Pilot runs V0, V1 for 20 cases + edge cases; score them; error analysis 1 | v1 failures logged with test ids |
-| 25–28 Oct | Adopt v2 (edited to fix those failures); run V2 and V2R; score; error analysis 2; send blind student form | Scoring sheet full, ≥5 student responses |
+| 25–28 Oct | Adopt v2 (edited to fix those failures); run V2; pilot the reviewer on one V2 answer; score; error analysis 2; send blind student form | Scoring sheet full, ≥5 student responses |
 | 29–31 Oct | Results table + chart; Ashima fills synopsis; Amna records video; screenshots | All `[ ]` filled with real numbers |
 | 1 Nov | Final check against the table above; submit on LMS | Submitted a day early |
 

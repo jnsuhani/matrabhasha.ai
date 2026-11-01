@@ -39,7 +39,7 @@ renamed Intermediate so that, for example, a second-year student or a non-B.Tech
   - v2: natural Hindi instead of literal translation, technical terms kept in English, a definition of each level. [Adopted because v1 showed: ...]
   - v3 (Milestone 3, planned, final version): level limits, term gloss rule (English term + short Hindi meaning), fixed 5-section
     output, accuracy/refusal rules, analogy guidance, one team-written few-shot example, only as far as v2 failures call for them.
-- **Reviewer prompt (from v2):** separate chat; scores rules R1–R6 and returns JSON with quoted errors and a PASS/REVISE verdict; on REVISE
+- **Reviewer prompt (used with the final prompt, v3):** separate chat; scores rules R1–R6 and returns JSON with quoted errors and a PASS/REVISE verdict; on REVISE
   the explainer rewrites once.
 - **Human oversight:** a team member verifies technical accuracy before an output is used.
 - **Prototype:** Gemini Gem [+ Custom GPT / Claude Project].
@@ -47,21 +47,23 @@ renamed Intermediate so that, for example, a second-year student or a non-B.Tech
 
 ## 4. Evaluation design
 - Test set: 25 introductory CS concepts (programming, data structures, algorithms, OS, DBMS) × 2 levels = 50 cases, plus 6 edge cases.
-- Conditions: V0 baseline, V1 short prompt, V2 guided prompt, V2R v2 + reviewer.
+- Conditions: V0 baseline, V1 short prompt, V2 guided prompt. The reviewer was pilot-tested on one V2 answer (T01); full V3R runs (v3 + reviewer) are planned for Milestone 3.
 - Team rubric (1–5, two independent scorers): accuracy, natural Hindi, term handling, level fit, analogy, completeness, practice
   questions; hallucination flag.
 - Blind student ratings ([n] anonymous Hindi-speaking classmates): naturalness, clarity, usefulness.
 
 ## 5. Pilot results (Milestone 2)
-| Criterion (avg, 1–5) | V0 baseline | V1 short | V2 guided | V2R v2+review |
-|---|---|---|---|---|
-| Accuracy | [ ] | [ ] | [ ] | [ ] |
-| Natural Hindi | [ ] | [ ] | [ ] | [ ] |
-| Term handling | [ ] | [ ] | [ ] | [ ] |
-| Level fit | [ ] | [ ] | [ ] | [ ] |
-| Completeness | [ ] | [ ] | [ ] | [ ] |
-| % outputs with hallucination | [ ] | [ ] | [ ] | [ ] |
-| Students: naturalness / clarity / usefulness | [ ] | [ ] | [ ] | — |
+| Criterion (avg, 1–5) | V0 baseline | V1 short | V2 guided |
+|---|---|---|---|
+| Accuracy | [ ] | [ ] | [ ] |
+| Natural Hindi | [ ] | [ ] | [ ] |
+| Term handling | [ ] | [ ] | [ ] |
+| Level fit | [ ] | [ ] | [ ] |
+| Completeness | [ ] | [ ] | [ ] |
+| % outputs with hallucination | [ ] | [ ] | [ ] |
+| Students: naturalness / clarity / usefulness | [ ] | [ ] | [ ] |
+
+Reviewer pilot (T01, V2 answer): verdict REVISE with 4 errors (code at Beginner level, 348 words against the 250 limit, missing the 5 sections, analogy limit not stated). Full V3R runs on the final prompt are planned for Milestone 3.
 
 Failures of v1 that led to v2, and failures of v2 that will shape v3: [2–3 lines each from error_analysis.md]
 
@@ -72,7 +74,7 @@ own writing; no copyrighted textbook text is used as input.
 
 ## 7. Limitations and next steps (Milestone 3)
 [Real limitations you saw, e.g. analogy quality varies, reviewer sometimes misses errors.] Next: run the full 50-case test set on
-ChatGPT, Gemini and Claude, adopt v3 if the v2 failures call for it, larger student rating round, final report and video.
+ChatGPT, Gemini and Claude, adopt v3 with the reviewer loop (V3R) if the v2 failures call for it, larger student rating round, final report and video.
 
 ## References
 1. Bennett University, Prompt Engineering Mini-Project Guidelines, 2026.

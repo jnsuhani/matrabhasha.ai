@@ -2,7 +2,7 @@
 
 Fill one section per prompt version, from **real scored outputs only**. The next version must be built from this list.
 
-**Status (1 Nov 2026):** all 60 pilot runs are in (V0, V1 and V2 × 20 cases, by Suhani, Khushi, Amna and Ashima), plus the 6 edge cases on V1 and V2. Everything below is a reading of the output files, with failures quoted from them. Team rubric scores and Amna's V2R reviewer runs are **not done yet**, so there are no scores or reviewer verdicts here. Ashima's files are referenced by their repo paths (`outputs/vN/T29.md` etc.) and appear once she uploads them.
+**Status (1 Nov 2026):** all 60 pilot runs are in (V0, V1 and V2 × 20 cases, by Suhani, Khushi, Amna and Ashima), plus the 6 edge cases on V1 and V2. Everything below is a reading of the output files, with failures quoted from them. Team rubric scores are **not done yet**, so there are no scores here. The reviewer moves to the final prompt (V3R, M3); in M2 it was pilot-tested once, on V2 T01 (see the reviewer pilot note below). Ashima's files are referenced by their repo paths (`outputs/vN/T29.md` etc.) and appear once she uploads them.
 
 ## Team summary: V0 → V1 → V2 (20 pilot cases each)
 
@@ -167,7 +167,7 @@ Areas where v1 had **no** real problem: no code for Beginners; recipe, dictionar
 
 **V1 across all 4 members (20 runs):** Roman script 6 of 20 (up from 0 in V0), code for Beginners 3 of 10, no practice questions 20 of 20, key points missing 10 of 20, factual errors 4 of 20 (T07, T08, T10, T29). The jump in Roman script and the uneven level depth are what v2 was built to fix.
 
-## v2 failures (from V2 pilot runs; V2R pending)
+## v2 failures (from V2 pilot runs)
 
 ### Suhani's cases (T01, T02, T07, T08, T09 · Gemini Flash · 2026-10-31)
 Outputs: `outputs/v2/`. Log rows: `V2-T01` … `V2-T09` in `experiment_log.csv`. Counts below are out of these 5 runs, compared with the same 5 V1 runs. Team scores and reviewer verdicts are not in yet, so this is a reading of the outputs, not a score.
@@ -291,8 +291,21 @@ What the edge cases show:
 - v2 asked for the missing level instead of assuming one (E02 better), but its Hindi instruction did not hold when the user asked for English (E04 worse than v1).
 - The v3 draft covers E01 ("not a CS concept → say so in one line"). It has **no rule yet** for E03 (unsupported level), E04 (asked for English) or E05 (instructions that try to change the role). Add these when v3 is finalised in M3.
 
-## V2R: v2 + reviewer loop (pending)
-Amna's reviewer runs on the 20 V2 outputs have **not been done yet**. Log rows `V2R-T01` … `V2R-T50` are placeholders with `reviewer_verdict = PENDING` and no observations. When they are run: save each reviewer JSON in `outputs/reviews/`, fill `reviewer_verdict`, `reviewer_errors_summary` and `revised_Y_N`, and add a section here comparing V2R with V2 (how many REVISE verdicts, and whether each revision fixed the errors listed above for that test id). Do not fill these from the V2 reading above.
+## Reviewer pilot (one run: V2 answer for T01 · Gemini Flash · 2026-11-01)
+Output: `outputs/reviews/T01.md`. Log row: `V2R-T01`. The reviewer is meant for the final prompt (V3R in M3), so in M2 it was run once only, to test it. Its rules R4 and R5 describe the v3 target, so a V2 answer is expected to fail them.
+
+**Verdict REVISE**, scores R1 5, R2 4, R3 5, R4 1, R5 1, R6 1. Without seeing our error analysis, the reviewer flagged the same T01 failures we found by hand:
+
+| Reviewer error (quoted from `T01.md`) | Same failure found by hand |
+|---|---|
+| R4: "Beginner level strictly forbids code snippets and requires only daily-life examples." (quoting `for i in range(5): print("Hello!")`) | Code for a Beginner (T01, T07, T13 in every version) |
+| R4: "The text contains 348 words, which exceeds the limit of <=250 words for Beginner level." | Length not controlled by v1/v2 |
+| R5: "Does not use the exact 5 required headings in order, misses key terms, misconception, and practice questions." | No fixed structure, no practice questions (20 of 20) |
+| R6: "The daily-life analogy does not state where the analogy breaks down." | Analogy rule only in v3 |
+
+The one revision (new chat, v2 Gem) removed the code and added an analogy limit ("हम इंसान दौड़ते हुए थक जाते हैं…"), 3 key terms, a misconception and 2 practice questions. It still has no separate explanation heading, and its misconception ("लूप हमेशा हमेशा के लिए चलता रहता है") is not the test-set one (condition checked only once). The reviewer also missed things we found by hand: the clumsy ordinals "2रा, 3रा" (it gave R3 Naturalness 5) and the missing target misconception.
+
+**What this supports:** the reviewer catches format, level and analogy problems reliably, which are exactly the rules being moved into v3. It is weaker on naturalness and on which misconception is addressed, so the human check stays. Full V3R runs on the final prompt are planned for M3.
 
 ## v3 failures (M3)
 | Test id | What went wrong | Rubric criterion | How often | Fix / limitation to report |

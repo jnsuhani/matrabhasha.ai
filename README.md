@@ -15,14 +15,14 @@ Prompt Engineering mini-project, B.Tech CSE 5th semester, Bennett University. Pr
 1. The student sends `Concept: <name> | Level: Beginner` (or `Intermediate`).
 2. The **explainer prompt** answers. It is developed in versions (v0 baseline → v1 short → v2 guided → v3 final), and each
    version is adopted only after real runs of the previous one show what it gets wrong. See [prompts/README.md](prompts/README.md).
-3. From v2 on, the **reviewer prompt** ([prompts/reviewer_prompt.md](prompts/reviewer_prompt.md)) scores it and returns PASS or REVISE with quoted errors.
+3. With the final prompt (v3), the **reviewer prompt** ([prompts/reviewer_prompt.md](prompts/reviewer_prompt.md)) scores it and returns PASS or REVISE with quoted errors. In Milestone 2 it was pilot-tested once, on the V2 answer for T01.
 4. On REVISE the explainer rewrites once; a team member checks accuracy before the answer is used.
 
 The prototype is a Gemini Gem (plus a Custom GPT / Claude Project for comparison). Setup: [build/build_guide.md](build/build_guide.md).
 
 ## Reproduce the evaluation
 - Test set: [test-set/test_set.csv](test-set/test_set.csv) (25 concepts × 2 levels) and [test-set/edge_cases.csv](test-set/edge_cases.csv).
-- Conditions: V0 baseline, V1, V2, V2R (v2 + reviewer); V3 and V3R in Milestone 3.
+- Conditions: V0 baseline, V1, V2 (plus one reviewer pilot run on T01); V3 and V3R (v3 + reviewer) in Milestone 3.
 - Rubric and forms: [evaluation/](evaluation/). Raw model outputs go in [outputs/](outputs/), copied exactly.
 - Pilot and demo steps: [build/demo_plan.md](build/demo_plan.md).
 

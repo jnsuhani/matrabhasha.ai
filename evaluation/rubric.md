@@ -8,8 +8,8 @@ Fix this rubric **before** you look at results (the guidelines ask for criteria 
 | V0 | v0 baseline prompt | `prompts/v0_baseline_prompt.md` | M2 pilot |
 | V1 | v1 short prompt | `prompts/v1_short_prompt.md` | M2 pilot |
 | V2 | v2 guided prompt | `prompts/v2_guided_prompt.md`, adopted after V1 error analysis | M2 pilot |
-| V2R | v2 + reviewer loop | V2, then reviewer, then one revision if verdict = REVISE | M2 pilot |
-| V3, V3R | v3 final prompt (+ reviewer) | `prompts/v3_explainer_prompt.md`, adopted after V2 error analysis | M3 |
+| Reviewer pilot | v2 + reviewer, 1 case only | Reviewer run once on V2 T01 to test it (`outputs/reviews/T01.md`); not scored as a condition | M2 (1 case) |
+| V3, V3R | v3 final prompt (+ reviewer loop: one revision if verdict = REVISE) | `prompts/v3_explainer_prompt.md`, adopted after V2 error analysis | M3 |
 
 Each new version is run only after the previous one has been scored and its failures logged (see `prompts/README.md`).
 
@@ -40,7 +40,7 @@ Make it a **blind** test: show outputs labelled only "Version 1 / 2 / 3", in ran
 ## Part 3: Numbers to report
 - Average score per criterion for each condition (a table and a bar chart), so you can show the change from V0 → V1 → V2.
 - % of outputs with hallucination flag, per condition.
-- % of V2 outputs the reviewer marked REVISE, and how many of those improved after revision.
+- M3: % of V3 outputs the reviewer marked REVISE, and how many of those improved after revision (V3R). In M2, report only the single T01 pilot run.
 - Student averages for Naturalness/Clarity/Usefulness per condition.
 - For each version, its failure cases and the change they caused in the next version (error analysis). This is the evidence for every version jump.
 
