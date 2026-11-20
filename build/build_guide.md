@@ -16,6 +16,8 @@ has moved, look for "Gems" / "Create a GPT" / "Project instructions".
 7. Screenshot the Gem setup page **for every version** you put in it, and the Reviewer Gem. These are evidence for the "build" marks. Save to `screenshots/`.
 
 ## Option 2 (backup / comparison): ChatGPT Custom GPT
+> Not built in Milestone 2: the team built only Gemini Gems. Kept here in case ChatGPT is used for the M3 cross-model runs.
+
 1. Go to https://chatgpt.com → **Explore GPTs** → **+ Create**. (Creating GPTs may need a paid plan. If it's not available,
    use Option 3 or just paste the prompt as the first message of a new chat.)
 2. Open the **Configure** tab.
@@ -25,6 +27,8 @@ has moved, look for "Gems" / "Create a GPT" / "Project instructions".
 6. Save as **Only me** or **Anyone with the link** (for the demo).
 
 ## Option 3: Claude Project
+> Not built in Milestone 2 (see the note under Option 2).
+
 1. https://claude.ai → **Projects** → **Create project** → name it Matrabhāsha.
 2. Paste the current prompt version into **Project instructions**. Every new chat in that project then uses it.
 
@@ -36,5 +40,5 @@ has moved, look for "Gems" / "Create a GPT" / "Project instructions".
 - Write the model and date of every run in `evaluation/experiment_log.csv` (models change over time).
 
 ## Saving outputs
-For every run, copy the answer into a text file named like `outputs/T07_V1_gemini.md` (test id, condition, model) and add a row in the
+For every run, copy the answer into `outputs/<version>/<test_id>.md` (for example `outputs/v1/T07.md`) and add a row in the
 experiment log. Copy-paste the text exactly; don't fix anything by hand, since the evaluation must show what the model really produced.

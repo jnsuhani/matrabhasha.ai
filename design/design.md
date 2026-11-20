@@ -66,8 +66,8 @@ flowchart LR
 ```
 
 ## 6. Interface
-No-code prototype: a **Gemini Gem** (main) and a **Custom GPT** (backup), both using the same instructions: the latest adopted version (update the Gem each time a new version is adopted).
-The student just types `Concept: Stack | Level: Beginner`. The reviewer is a second Gem/GPT.
+No-code prototype: **Gemini Gems** on Gemini Flash, one per adopted version (**Matrabhāsha v1**, **Matrabhāsha v2**), each holding that version's instructions exactly as in `prompts/`. Screenshots: `screenshots/gem_v1_*.png`, `screenshots/gem_v2_*.png`.
+The student just types `Concept: Stack | Level: Beginner`. The reviewer is a separate prompt run after the explainer's answer (pilot run on V2 T01: `outputs/reviews/T01.md`).
 See `build/build_guide.md`.
 
 ## 7. Responsible-AI design choices

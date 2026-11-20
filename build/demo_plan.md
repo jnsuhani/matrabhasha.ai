@@ -5,11 +5,11 @@ Pilot = the 10 concepts marked `in_m2_pilot = yes` in `test-set/test_set.csv`, b
 
 | Step | What | Output files |
 |---|---|---|
-| 1 | Run **V0** (v0 baseline) on Gemini for all 20 cases, each in a **new chat** | `outputs/Txx_V0_gemini.md` |
-| 2 | Run **V1** (v1 short prompt in the Gem) for all 20, plus the 6 edge cases | `outputs/Txx_V1_gemini.md`, `outputs/E0x_V1_gemini.md` |
+| 1 | Run **V0** (v0 baseline) on Gemini for all 20 cases, each in a **new chat** | `outputs/v0/<test_id>.md` (e.g. `outputs/v0/T01.md`) |
+| 2 | Run **V1** (v1 short prompt in the Gem) for all 20, plus the 6 edge cases | `outputs/v1/<test_id>.md`, `outputs/v1/E0x.md` |
 | 3 | Two members score V0 and V1 with the rubric | `evaluation/team_scoring_sheet.csv` |
 | 4 | **Error analysis 1:** list v1's real failures with test ids. Edit the v2 draft so it fixes exactly those, then adopt it | `evaluation/error_analysis.md`, `prompts/README.md` |
-| 5 | Run **V2** for the same 20 cases + 6 edge cases | `outputs/Txx_V2_gemini.md` |
+| 5 | Run **V2** for the same 20 cases + 6 edge cases | `outputs/v2/<test_id>.md`, `outputs/v2/E0x.md` |
 | 6 | Pilot-test the reviewer once on a V2 output (T01); if REVISE, ask for one revision. Full reviewer runs (V3R) come with v3 in M3 | `outputs/reviews/T01.md` |
 | 7 | Score V2; **error analysis 2** (this decides what v3 needs, for M3) | scoring sheet, `evaluation/error_analysis.md` |
 | 8 | Send the blind student form (V0 vs V1 vs V2) | `evaluation/student_ratings.csv` |
@@ -24,11 +24,11 @@ Optional if time allows: run V2 on ChatGPT and Claude for the same 20 cases to c
 ## Part B: Live demo in class (from 3 Nov)
 Keep it under 4 minutes. Rehearse once.
 
-1. **Problem (20 s):** show the M1 baseline recursion output. Point at a stiff sentence or coined Hindi term.
+1. **Problem (20 s):** show the M1 baseline recursion output (or a V0 pilot output from `outputs/v0/`). Point at a stiff sentence or coined Hindi term.
    Then show one real v1 failure from your log and the v2 rule that fixed it (this shows iteration).
 2. **Live run (60 s):** in the Gem (on v2), type `Concept: Stack | Level: Beginner`. Then `Concept: Stack | Level: Intermediate`. Point out the
    difference in depth and the English terms. (The fixed 5 sections and term glosses only arrive with v3, so don't promise them on v2.)
-3. **Reviewer (45 s):** paste the answer into the Reviewer Gem and show the JSON verdict.
+3. **Reviewer (45 s):** show the reviewer pilot on V2 T01 (`outputs/reviews/T01.md`): the JSON verdict (REVISE) and the errors it quoted.
 4. **Robustness (30 s):** type edge case E05 (prompt injection) and show it stays on task.
 5. **Results (45 s):** show your pilot results table/bar chart (V0 vs V1 vs V2) and one failure case you fixed.
 

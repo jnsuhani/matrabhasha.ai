@@ -1,14 +1,14 @@
-# v2 — Guided prompt (DRAFT, planned)
+# v2 — Guided prompt (adopted 31 Oct 2026)
 
-> **Draft.** Only adopt v2 after real v1 runs show the problems it fixes (for example: stiff or translated Hindi, coined Hindi
-> words, a vague idea of the levels). Edit it so each addition matches a failure you logged, and drop what you didn't need.
-> See `README.md` in this folder.
+> **Adopted 31 Oct 2026** in the Gem "Matrabhāsha v2" (Gemini Flash; `screenshots/gem_v2_setup.png`), after the v1 runs
+> showed uncontrolled script (Roman Hinglish) and undefined levels. Outputs: `outputs/v2/`. Version history and the failures
+> behind each change: `README.md` in this folder.
 
 v2 = v1 + an instruction for **natural Hindi, not word-for-word translation**, **keep technical terms in English**, and a
 **definition of each level** (based on what the learner knows, not their year or degree). Still no fixed sections, no word
 limits and no examples.
 
-Paste the box into the Gem / Custom GPT instructions (or as the first message of a new chat), then send
+Paste the box into the Gemini Gem instructions (or as the first message of a new chat), then send
 `Concept: <name> | Level: Beginner` (or `Level: Intermediate`).
 
 ```

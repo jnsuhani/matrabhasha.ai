@@ -19,18 +19,21 @@ any file. Leave `[ ]` until you have the real one.
 | Running build (3) | `prompts/*` (versions v0 → v3), `build/build_guide.md` |
 | Demo / pilot run (2) | `build/demo_plan.md`, `test-set/*`, `evaluation/*` |
 | Git repo / Drive (2) | `docs/repo_layout.md` |
-| Synopsis (1) | `docs/synopsis.md` (draft, fill in results) |
+| Synopsis (1) | `docs/synopsis.md` (filled from the pilot runs) |
 | 90–150 s video (2) | `docs/video_script.md` |
 
 ## Roles
-| Member | Owns | Also |
-|---|---|---|
-| Suhani (leader) | Build Gems/GPT, keep prompt versions + repo | Scores outputs (scorer 1) |
-| Khushi | Checks test set vs syllabus | Writes 1 few-shot example |
-| Amna | Video (narration and recording), reviewer pilot run (T01), error analysis | Scores outputs (scorer 2) |
-| Ashima | Synopsis, slides, student rating form, edge cases | Writes 1 few-shot example |
+Same roles as the synopsis (`docs/synopsis.md`, Team contributions).
 
-Everyone runs a quarter of the pilot cases and commits their own files (contribution evidence).
+| Member | Did in M2 | Still planned |
+|---|---|---|
+| Suhani (leader) | Gemini Gems, Git repository, pilot runs | Scores outputs (scorer 1) |
+| Khushi | Syllabus check of the test set, pilot runs | Writes 1 few-shot example |
+| Amna | Pilot runs, video narration | Scores outputs (scorer 2) |
+| Ashima | Pilot runs, edge cases E01 to E06, slides | Student rating form, writes 1 few-shot example |
+
+Everyone ran a quarter of the pilot cases (5 each under V0, V1 and V2) and logged them. The error analysis and the synopsis were
+compiled from everyone's logged runs.
 
 ## Plan to 2 November
 | Dates | Do | Done when |
@@ -38,7 +41,7 @@ Everyone runs a quarter of the pilot cases and commits their own files (contribu
 | 20 Oct (today) | Check test set against syllabus; build the Gem with v1; repo is already set up | Gem answers a test concept |
 | 21–24 Oct | Pilot runs V0, V1 for 20 cases + edge cases; score them; error analysis 1 | v1 failures logged with test ids |
 | 25–28 Oct | Adopt v2 (edited to fix those failures); run V2; pilot the reviewer on one V2 answer; score; error analysis 2; send blind student form | Scoring sheet full, ≥5 student responses |
-| 29–31 Oct | Results table + chart; Ashima fills synopsis; Amna records video; screenshots | All `[ ]` filled with real numbers |
+| 29–31 Oct | Results table + chart; synopsis compiled from the team's logs; Amna narrates the video; screenshots | All `[ ]` filled with real numbers |
 | 1 Nov | Final check against the table above; submit on LMS | Submitted a day early |
 
 ## Roadmap to Milestone 3 (due 1 Dec 2026, 10 marks)

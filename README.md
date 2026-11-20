@@ -18,7 +18,7 @@ Prompt Engineering mini-project, B.Tech CSE 5th semester, Bennett University. Pr
 3. With the final prompt (v3), the **reviewer prompt** ([prompts/reviewer_prompt.md](prompts/reviewer_prompt.md)) scores it and returns PASS or REVISE with quoted errors. In Milestone 2 it was pilot-tested once, on the V2 answer for T01.
 4. On REVISE the explainer rewrites once; a team member checks accuracy before the answer is used.
 
-The prototype is a Gemini Gem (plus a Custom GPT / Claude Project for comparison). Setup: [build/build_guide.md](build/build_guide.md).
+The prototype is built as Gemini Gems on Gemini Flash: **Matrabhāsha v1** and **Matrabhāsha v2**, one per adopted prompt version (screenshots in [screenshots/](screenshots/)). Setup: [build/build_guide.md](build/build_guide.md).
 
 ## Reproduce the evaluation
 - Test set: [test-set/test_set.csv](test-set/test_set.csv) (25 concepts × 2 levels) and [test-set/edge_cases.csv](test-set/edge_cases.csv).
@@ -36,12 +36,15 @@ The prototype is a Gemini Gem (plus a Custom GPT / Claude Project for comparison
 | `design/` | Design description and diagrams |
 | `build/` | Prototype build guide and demo plan |
 | `docs/` | Synopsis, video script, Milestone 2 plan |
-| `screenshots/` | Gem/GPT setup and demo evidence |
+| `screenshots/` | Gem setup and demo evidence |
 
 Contribution record: [CONTRIBUTIONS.md](CONTRIBUTIONS.md).
 
 ## Status
-Milestone 1 submitted. Milestone 2 (due 2 Nov 2026): prompts, test set and rubric drafted; pilot runs and scoring in progress.
+Milestone 1 submitted. Milestone 2 (due 2 Nov 2026): v0, v1 and v2 run on the 20 pilot cases (60 runs, all logged in
+[evaluation/experiment_log.csv](evaluation/experiment_log.csv)), edge cases E01 to E06 run on v1 and v2, error analysis written,
+reviewer pilot-tested once on V2 T01, synopsis filled from these runs. Team rubric scores and blind student ratings are not done yet.
+Milestone 3 (due 1 Dec 2026): v3, reviewer loop (V3R), full 50 cases on three models.
 All results in this repository come from the team's own runs.
 
 ## References

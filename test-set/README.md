@@ -6,5 +6,10 @@
   - `in_m2_pilot = yes` marks the **10 concepts (20 cases)** to run before 2 Nov. Run the rest for Milestone 3.
 - `edge_cases.csv`: 6 tricky inputs (off-topic, missing level, prompt injection). These test reliability and are worth showing in the demo.
 
-The concept list was drafted by Claude from a standard first-year syllabus. **Before running, the team should check it against
-your actual Bennett first-year syllabus** and swap any concept that doesn't fit, and note that change in the version history.
+The concept list was drafted by Claude from a standard first-year syllabus.
+
+## Syllabus check (pending record)
+Khushi Upadhyay owns the check of this list against the Bennett first-year syllabus. Its result is **not recorded yet**. When
+it is done, write here: the date, the syllabus/course codes used, and either "no changes" or each concept swapped (old → new,
+with test ids). Note any swap in `prompts/README.md` too. No concept has been changed so far, so the pilot runs used the list
+as drafted.

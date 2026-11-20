@@ -7,9 +7,9 @@ final prompt.
 | Version | File | What it adds | Status |
 |---|---|---|---|
 | v0 | `v0_baseline_prompt.md` | One-line baseline from Milestone 1 | Final (don't change) |
-| v1 | `v1_short_prompt.md` | Two lines: teacher role + learner level, nothing else | Ready to run |
-| v2 | `v2_guided_prompt.md` | Natural Hindi (not word-for-word), keep English terms, what each level means | Draft, adopt after v1 error analysis |
-| v3 | `v3_explainer_prompt.md` | Final version: level limits, term gloss rule, fixed 5-section format, accuracy/refusal rules, analogy guidance, numbers rule, team-written few-shot example | Draft, adopt after v2 error analysis |
+| v1 | `v1_short_prompt.md` | Two lines: teacher role + learner level, nothing else | Adopted 31 Oct 2026 (Gem "Matrabhāsha v1"), run on the 20 pilot cases + 6 edge cases |
+| v2 | `v2_guided_prompt.md` | Natural Hindi (not word-for-word), keep English terms, what each level means | Adopted 31 Oct 2026 (Gem "Matrabhāsha v2"), run on the 20 pilot cases + 6 edge cases |
+| v3 | `v3_explainer_prompt.md` | Final version: level limits, term gloss rule, fixed 5-section format, accuracy/refusal rules, analogy guidance, numbers rule, team-written few-shot example | Draft, not adopted yet. To be finalised in M3 from the v2 error analysis |
 | Reviewer | `reviewer_prompt.md` | Second prompt that checks the latest version's output (prompt chaining) | Ready; used with v3 (V3R, M3). Pilot-tested once on V2 T01 in M2 |
 
 Also here: `few_shot_examples.md` (template for the examples v3 needs).
@@ -30,12 +30,15 @@ doesn't tell you what they know. Mention this change in the report.
    drop additions you didn't need, add fixes for problems the drafts don't cover.
 4. If version N had no real problem in some area, say so honestly. That's a valid finding too.
 
-The v2 and v3 files are drafts prepared in advance so you have a starting point. They are not evidence. Your logs are.
+v2 was adopted after the v1 runs; the v3 file is still a draft prepared in advance. Drafts are not evidence. Our logs are.
 
-## Version history (fill in as you go, this is graded as "iteration")
+## Version history (this is graded as "iteration")
+Dates come from `evaluation/experiment_log.csv` and the Gem screenshots in `screenshots/`. Failure details are in
+`evaluation/error_analysis.md`.
+
 | Version | Date adopted | Who | What changed | Failures that caused it (test ids from the log) |
 |---|---|---|---|---|
-| v0 | M1 | Team | Baseline | — |
-| v1 | | | Teacher role, learner level | v0 problems seen in M1 (see v0 file) |
-| v2 | | | | |
-| v3 | | | | |
+| v0 | M1 | Team | One-line baseline from Milestone 1 | — |
+| v1 | 31 Oct 2026 | Suhani built the Gem "Matrabhāsha v1"; all four members ran it | Two lines: friendly CS teacher role + "explain in Hindi at the level they mention (Beginner or Intermediate)" | v0 problems seen in the M1 sample output (see `v0_baseline_prompt.md`) |
+| v2 | 31 Oct 2026 | Suhani built the Gem "Matrabhāsha v2"; all four members ran it | Natural, conversational Hindi in Devanagari, no word-for-word translation; technical terms kept in English; Beginner and Intermediate defined by what the learner already knows | v1 Roman Hinglish / uncontrolled script (T02; later also T10, T13, T45) and mixed scripts (T42); levels not defined: code for Beginners (T01, T07, T13) and uneven Intermediate depth (T02, T08) |
+| v3 | Not adopted yet (M3) | — | Planned: level limits (no code for Beginner), term gloss rule, fixed 5-section format, accuracy/refusal rules, analogy guidance, numbers rule, few-shot example. Edit before adopting so each change matches a logged v2 failure | v2 failures to target: no practice questions or fixed structure in any of the 20 runs; code still given to Beginners (T01, T07); greeting/teacher-tone openings (T37, T38, T45); factual errors (T08, T46); edge cases E01, E03, E04, E05 |

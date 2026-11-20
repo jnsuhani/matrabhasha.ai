@@ -9,7 +9,7 @@ v3 is the final, most complete version. v3 = v2 + **level limits** (no code for 
 
 The reviewer stays a separate prompt (`reviewer_prompt.md`); it is not part of v3.
 
-Paste everything inside the box into the **Instructions** field of the Gemini Gem / Custom GPT, or as the first message in a normal chat.
+Paste everything inside the box into the **Instructions** field of the Gemini Gem, or as the first message in a normal chat.
 Then send only: `Concept: <name> | Level: Beginner` (or `Level: Intermediate`).
 
 ```

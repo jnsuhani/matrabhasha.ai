@@ -19,8 +19,10 @@ syntaxai-matrabhasha/
 │   ├── test_set.csv
 │   └── edge_cases.csv
 ├── outputs/                  ← raw model outputs, copied exactly
-│   ├── T01_A_gemini.md ...
-│   └── reviews/
+│   ├── v0/T01.md ...         ← one folder per condition: v0/, v1/, v2/
+│   ├── v1/T01.md, v1/E01.md ...
+│   ├── v2/T01.md, v2/E01.md ...
+│   └── reviews/T01.md        ← reviewer pilot on V2 T01
 ├── evaluation/
 │   ├── rubric.md
 │   ├── experiment_log.csv
@@ -37,7 +39,7 @@ syntaxai-matrabhasha/
 ├── build/
 │   ├── build_guide.md
 │   └── demo_plan.md
-├── screenshots/              ← Gem/GPT setup, demo runs
+├── screenshots/              ← Gem setup, demo runs
 ├── docs/
 │   ├── synopsis.md
 │   └── video_script.md

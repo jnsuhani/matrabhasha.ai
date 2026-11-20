@@ -4,7 +4,7 @@ The first, small step up from v0. It adds only two things: a **teacher role** an
 write the Hindi, what to do with English terms, what the levels mean, or what the answer should contain. Those are left out on
 purpose, so the v1 runs show which of them are really needed.
 
-Paste the box into the Gem / Custom GPT instructions (or as the first message of a new chat), then send
+Paste the box into the Gemini Gem instructions (or as the first message of a new chat), then send
 `Concept: <name> | Level: Beginner` (or `Level: Intermediate`).
 
 ```

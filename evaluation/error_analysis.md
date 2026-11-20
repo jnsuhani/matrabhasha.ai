@@ -2,7 +2,7 @@
 
 Fill one section per prompt version, from **real scored outputs only**. The next version must be built from this list.
 
-**Status (1 Nov 2026):** all 60 pilot runs are in (V0, V1 and V2 × 20 cases, by Suhani, Khushi, Amna and Ashima), plus the 6 edge cases on V1 and V2. Everything below is a reading of the output files, with failures quoted from them. Team rubric scores are **not done yet**, so there are no scores here. The reviewer moves to the final prompt (V3R, M3); in M2 it was pilot-tested once, on V2 T01 (see the reviewer pilot note below). Ashima's files are referenced by their repo paths (`outputs/vN/T29.md` etc.) and appear once she uploads them.
+**Status (1 Nov 2026):** all 60 pilot runs are in (V0, V1 and V2 × 20 cases, by Suhani, Khushi, Amna and Ashima), plus the 6 edge cases on V1 and V2. Everything below is a reading of the output files, with failures quoted from them. Team rubric scores are **not done yet**, so there are no scores here. The reviewer moves to the final prompt (V3R, M3); in M2 it was pilot-tested once, on V2 T01 (see the reviewer pilot note below).
 
 ## Team summary: V0 → V1 → V2 (20 pilot cases each)
 
@@ -63,7 +63,7 @@ Outputs: `outputs/v0/`. Log rows: `V0-T10` … `V0-T22`. Counts are out of these
 Areas where v0 had **no** real problem: all 5 in Devanagari; T13 and T14 have every pointer key point including NULL, and state "address, not value" directly; T10 has every array key point.
 
 ### Ashima's cases (T29, T30, T37, T38, T41 · Gemini Flash, no Gem · 2026-11-01)
-Outputs: `outputs/v0/` (after Ashima's upload). Log rows: `V0-T29` … `V0-T41`. Counts are out of these 5 runs. A reading of the outputs, not a score.
+Outputs: `outputs/v0/`. Log rows: `V0-T29` … `V0-T41`. Counts are out of these 5 runs. A reading of the outputs, not a score.
 
 | Test id | What went wrong | Rubric criterion | How often (x of 5) | Addressed in |
 |---|---|---|---|---|
@@ -152,7 +152,7 @@ Compared with V0: V0's accuracy errors in T42 ("Ignition" for Ignorance, whole s
 Areas where v1 had **no** real problem: no code for the Beginner cases; T46 has every key point with correct `CREATE TABLE` / `ALTER TABLE`; T42's bridge analogy fits.
 
 ### Ashima's cases (T29, T30, T37, T38, T41 · Gemini Flash · 2026-10-31)
-Outputs: `outputs/v1/` (after Ashima's upload). Log rows: `V1-T29` … `V1-T41`. Counts are out of these 5 runs. A reading of the outputs, not a score.
+Outputs: `outputs/v1/`. Log rows: `V1-T29` … `V1-T41`. Counts are out of these 5 runs. A reading of the outputs, not a score.
 
 | Test id | What went wrong | Rubric criterion | How often (x of 5) | Fix to try in v2 |
 |---|---|---|---|---|
@@ -248,7 +248,7 @@ Outputs: `outputs/v2/`. Log rows: `V2-T42` … `V2-T50`. Counts are out of these
 | T45, T49 | **Tone:** "अरे आइए-आइए! बैठिए सब लोग।", "यह बला क्या है" (T45), "Normalization क्या बला है?" (T49); typos "उदहारण" (T45), "समझंगे" (T42) | B Natural Hindi | 2 of 5 (tone) | v3: no greetings; reviewer checks language |
 
 ### Ashima's cases (T29, T30, T37, T38, T41 · Gemini Flash · 2026-10-31)
-Outputs: `outputs/v2/` (after Ashima's upload). Log rows: `V2-T29` … `V2-T41`. Counts are out of these 5 runs, compared with the same 5 V1 runs. A reading of the outputs, not a score.
+Outputs: `outputs/v2/`. Log rows: `V2-T29` … `V2-T41`. Counts are out of these 5 runs, compared with the same 5 V1 runs. A reading of the outputs, not a score.
 
 | v1 pattern | v1 (same 5 cases) | v2 | Result |
 |---|---|---|---|
@@ -274,7 +274,7 @@ Areas where v2 had **no** real problem: all 5 in Devanagari; no code for Beginne
 **V2 across all 4 members (20 runs):** Roman script 0 of 20 (from 6), code for Beginners 3 of 10 (unchanged), no practice questions 20 of 20, key points missing 9 of 20, factual errors 4 of 20 (T07, T08, T14, T46), misconception named directly 3 of 20. v2 fixed what it targeted (script, level wording at Intermediate) and nothing else, which is the case for v3's format, no-code, key-point and accuracy rules.
 
 ## Edge cases E01–E06 (Ashima · V1 and V2 Gems only, no V0 · 2026-11-01)
-Inputs and expected behaviour: `test-set/edge_cases.csv`. Outputs: `outputs/v1/E0x.md`, `outputs/v2/E0x.md` (after Ashima's upload). Log rows: `V1-E01` … `V2-E06`.
+Inputs and expected behaviour: `test-set/edge_cases.csv`. Outputs: `outputs/v1/E0x.md`, `outputs/v2/E0x.md`. Log rows: `V1-E01` … `V2-E06`.
 
 | Id | Input | Expected | V1 | V2 |
 |---|---|---|---|---|
