@@ -8,8 +8,6 @@
 
 The concept list was drafted by Claude from a standard first-year syllabus.
 
-## Syllabus check (pending record)
-Khushi Upadhyay owns the check of this list against the Bennett first-year syllabus. Its result is **not recorded yet**. When
-it is done, write here: the date, the syllabus/course codes used, and either "no changes" or each concept swapped (old → new,
-with test ids). Note any swap in `prompts/README.md` too. No concept has been changed so far, so the pilot runs used the list
-as drafted.
+## Syllabus check
+Done by Khushi Upadhyay: the concept list was checked against the Bennett first-year syllabus and found to fit, so **no concept
+was changed**. The pilot runs and the full test set use the list as drafted.
