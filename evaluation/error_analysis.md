@@ -4,6 +4,8 @@ Fill one section per prompt version, from **real scored outputs only**. The next
 
 **Status (1 Nov 2026):** all 60 pilot runs are in (V0, V1 and V2 × 20 cases, by Suhani, Khushi, Amna and Ashima), plus the 6 edge cases on V1 and V2. Everything below is a reading of the output files, with failures quoted from them. Team rubric scores are **not done yet**, so there are no scores here. The reviewer moves to the final prompt (V3R, M3); in M2 it was pilot-tested once, on V2 T01 (see the reviewer pilot note below).
 
+**Model name:** "Gemini Flash" below is the label at run time. "Flash" was the Gemini app's earlier label for its fast model; the app's model picker now calls it "Everyday help (4 Hydrogen)".
+
 ## Team summary: V0 → V1 → V2 (20 pilot cases each)
 
 Counts are out of 20 runs per condition (10 Beginner, 10 Intermediate). Test ids are listed so every number can be checked against the files.

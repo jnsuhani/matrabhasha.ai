@@ -18,7 +18,9 @@ Prompt Engineering mini-project, B.Tech CSE 5th semester, Bennett University. Pr
 3. With the final prompt (v3), the **reviewer prompt** ([prompts/reviewer_prompt.md](prompts/reviewer_prompt.md)) scores it and returns PASS or REVISE with quoted errors. In Milestone 2 it was pilot-tested once, on the V2 answer for T01.
 4. On REVISE the explainer rewrites once, and the student gets the final answer directly. During testing, team members checked outputs for technical accuracy.
 
-The prototype is built as Gemini Gems on Gemini Flash: **Matrabhāsha v1** and **Matrabhāsha v2**, one per adopted prompt version (screenshots in [screenshots/](screenshots/)). Setup: [build/build_guide.md](build/build_guide.md).
+The prototype is built as Gemini Gems in the Gemini app, Everyday help (4 Hydrogen) model: **Matrabhāsha v1** and **Matrabhāsha v2**, one per adopted prompt version (screenshots in [screenshots/](screenshots/)). Setup: [build/build_guide.md](build/build_guide.md).
+
+**Model name:** all Milestone 2 runs (31 Oct to 1 Nov 2026) were logged as Gemini Flash. "Flash" was the Gemini app's earlier label for its fast model; the app's model picker now calls it "Everyday help (4 Hydrogen)".
 
 ## Reproduce the evaluation
 - Test set: [test-set/test_set.csv](test-set/test_set.csv) (25 concepts × 2 levels) and [test-set/edge_cases.csv](test-set/edge_cases.csv).

@@ -2,6 +2,8 @@
 
 **Condition:** plain Gemini **Flash**, no Gem instructions (a new Gemini chat, or a Gem with empty instructions named "Matrabhāsha v0").
 
+> Model name: our runs were logged as Gemini Flash. "Flash" was the Gemini app's earlier label for its fast model; the app's model picker now calls it "Everyday help (4 Hydrogen)". Log new runs with the label the app shows.
+
 **What to send** (same wording for every case, one new chat per case):
 
 ```

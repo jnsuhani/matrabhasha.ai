@@ -58,7 +58,7 @@ a two-scorer rubric and blind ratings from Hindi-speaking students, against the 
 - **Reviewer prompt (used with the final prompt, v3):** separate chat; scores rules R1 to R6 and returns JSON with quoted errors
   and a PASS/REVISE verdict; on REVISE the explainer rewrites once.
 - **Accuracy during testing:** team members checked outputs for technical accuracy.
-- **Prototype:** Gemini Gems for v1 and v2 (setup and chat screenshots in the repository).
+- **Prototype:** Gemini Gems for v1 and v2 in the Gemini app, Everyday help (4 Hydrogen) model (setup and chat screenshots in the repository).
 
 ![Matrabhāsha workflow](../design/workflow.png)
 
@@ -137,5 +137,6 @@ The error analysis and this synopsis were compiled from everyone's logged runs.
 1. Bennett University, Prompt Engineering Mini-Project Guidelines, 2026.
 2. Careers360, "UGC issues guidelines for translation of books in Indian languages", https://news.careers360.com/ugc-issues-guidelines-for-translation-of-books-in-indian-languages/amp
 3. Ministry of Education, National Education Policy 2020.
-4. Tools used: Google Gemini (Gemini Flash and Gemini Gems), all Milestone 2 runs between 31 October and 1 November 2026.
+4. Tools used: Google Gemini app with Gemini Gems; all Milestone 2 runs between 31 October and 1 November 2026 were logged as
+   Gemini Flash. "Flash" was the Gemini app's earlier label for its fast model; the app's model picker now calls it "Everyday help (4 Hydrogen)".
    OpenAI ChatGPT and Anthropic Claude are planned for the Milestone 3 cross-model runs.

@@ -2,6 +2,8 @@
 
 **Condition:** the **Matrabhāsha v2** Gem on Gemini **Flash**, with the instructions from `prompts/v2_guided_prompt.md`. Setup screenshots: `screenshots/gem_v2_setup.png`, `screenshots/gem_v2_chat.png`.
 
+> Model name: our runs were logged as Gemini Flash. "Flash" was the Gemini app's earlier label for its fast model; the app's model picker now calls it "Everyday help (4 Hydrogen)". Log new runs with the label the app shows.
+
 **What to send** (one new chat per case):
 
 ```

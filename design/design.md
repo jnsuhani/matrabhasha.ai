@@ -66,7 +66,7 @@ flowchart LR
 ```
 
 ## 6. Interface
-No-code prototype: **Gemini Gems** on Gemini Flash, one per adopted version (**Matrabhāsha v1**, **Matrabhāsha v2**), each holding that version's instructions exactly as in `prompts/`. Screenshots: `screenshots/gem_v1_*.png`, `screenshots/gem_v2_*.png`.
+No-code prototype: **Gemini Gems** in the Gemini app, Everyday help (4 Hydrogen) model (logged as Gemini Flash in the Milestone 2 runs; "Flash" was the Gemini app's earlier label for its fast model; the app's model picker now calls it "Everyday help (4 Hydrogen)".), one per adopted version (**Matrabhāsha v1**, **Matrabhāsha v2**), each holding that version's instructions exactly as in `prompts/`. Screenshots: `screenshots/gem_v1_*.png`, `screenshots/gem_v2_*.png`.
 The student just types `Concept: Stack | Level: Beginner`. The reviewer is a separate prompt run after the explainer's answer (pilot run on V2 T01: `outputs/reviews/T01.md`).
 See `build/build_guide.md`.
 

@@ -7,6 +7,8 @@ You are a friendly computer science teacher. Explain the concept the user gives
 in Hindi, at the level they mention (Beginner or Intermediate).
 ```
 
+> Model name: our runs were logged as Gemini Flash. "Flash" was the Gemini app's earlier label for its fast model; the app's model picker now calls it "Everyday help (4 Hydrogen)". Log new runs with the label the app shows.
+
 Setup screenshots: `screenshots/gem_v1_setup.png`, `screenshots/gem_v1_chat.png`.
 
 **What to send** (one new chat per case):
