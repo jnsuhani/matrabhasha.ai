@@ -48,5 +48,4 @@ A reviewer found these problems. Rewrite the full answer fixing only these probl
 ```
 This "generate → review → revise" loop is the **prompt chaining** part of the design.
 
-**Important:** the reviewer is an AI and can be wrong. A team member still checks R1 (accuracy) by hand before an
-output counts as correct. Say this in the report: it's the human-oversight step.
+**Important:** the reviewer is an AI and can be wrong. During testing, team members checked outputs for technical accuracy.

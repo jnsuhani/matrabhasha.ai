@@ -4,7 +4,7 @@
 **Input:** an introductory CS concept + a level: Beginner (no programming background) or Intermediate (knows programming
 basics, wants technical depth). Levels are about what the learner knows, not their year or degree.
 **Output:** a natural-Hindi explanation in 5 fixed sections (explanation, analogy, key terms, misconception, practice),
-checked by a second reviewer prompt and a human before it is used.
+checked by a second reviewer prompt before it is shown to the student.
 
 ## 2. Task decomposition
 The one big task ("explain this in Hindi") is split into smaller prompt tasks. The explainer prompt grows in versions
@@ -18,7 +18,8 @@ The one big task ("explain this in Hindi") is split into smaller prompt tasks. T
 | 4. Keep format fixed | Explainer prompt (v3 format + example) | Structured output, few-shot example |
 | 5. Check accuracy, terms, tone, level, format | Reviewer prompt (separate chat) | Prompt chaining, LLM-as-judge, JSON output |
 | 6. Fix flagged problems | Explainer prompt (revision message) | Self-refinement from feedback |
-| 7. Final accuracy check | Team member | Human oversight |
+
+During testing, team members checked outputs for technical accuracy.
 
 ## 3. Workflow diagram
 Image version: `workflow.png` (ready for slides/report) and `workflow.svg` (editable). It shows the full planned workflow; the input check, 5-section format and reviewer loop arrive with v3 (the reviewer was pilot-tested once on a V2 answer in M2), so v1 is just "input → explainer → answer".
@@ -34,8 +35,7 @@ flowchart TD
     R --> D{Verdict}
     D -- REVISE --> F[Send errors back to explainer<br/>rewrite once]
     F --> O
-    D -- PASS --> H[Team member checks accuracy]
-    H --> S[Final Hindi explanation<br/>to student]
+    D -- PASS --> S[Final Hindi explanation<br/>to student]
 ```
 
 ## 4. Prompt architecture: the version ladder
@@ -72,10 +72,9 @@ See `build/build_guide.md`.
 
 ## 7. Responsible-AI design choices
 - No personal data: inputs are only concept names. Student ratings are anonymous.
-- Hallucination: accuracy rules in the prompt + reviewer + human check before use.
+- Hallucination: accuracy rules in the prompt + reviewer prompt. During testing, team members checked outputs for technical accuracy.
 - Bias/inclusion: analogies from everyday Indian life, not region- or religion-specific; reviewers watch for this.
 - Copyright: outputs are generated; the team's few-shot examples are original. No textbook text is pasted in.
-- Limit stated to users: "AI-generated, verify with your teacher."
 
 ## How to view the mermaid diagrams
 GitHub shows them automatically. Elsewhere, paste a block into https://mermaid.live and export PNG.

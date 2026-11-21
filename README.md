@@ -3,7 +3,7 @@
 A prompt workflow that explains introductory computer science concepts in natural, conversational Hindi to Hindi-comfortable
 learners at two knowledge levels: **Beginner** (no programming background) and **Intermediate** (knows programming basics, wants
 technical depth), whatever their year or degree. Technical terms stay in English with a short Hindi gloss, and every answer includes an everyday
-analogy, a common misconception and practice questions. A second reviewer prompt checks each answer before a team member verifies it.
+analogy, a common misconception and practice questions. A second reviewer prompt checks each answer.
 
 Prompt Engineering mini-project, B.Tech CSE 5th semester, Bennett University. Problem Pool ID **C19** (Bilingual explainer).
 
@@ -16,7 +16,7 @@ Prompt Engineering mini-project, B.Tech CSE 5th semester, Bennett University. Pr
 2. The **explainer prompt** answers. It is developed in versions (v0 baseline → v1 short → v2 guided → v3 final), and each
    version is adopted only after real runs of the previous one show what it gets wrong. See [prompts/README.md](prompts/README.md).
 3. With the final prompt (v3), the **reviewer prompt** ([prompts/reviewer_prompt.md](prompts/reviewer_prompt.md)) scores it and returns PASS or REVISE with quoted errors. In Milestone 2 it was pilot-tested once, on the V2 answer for T01.
-4. On REVISE the explainer rewrites once; a team member checks accuracy before the answer is used.
+4. On REVISE the explainer rewrites once, and the student gets the final answer directly. During testing, team members checked outputs for technical accuracy.
 
 The prototype is built as Gemini Gems on Gemini Flash: **Matrabhāsha v1** and **Matrabhāsha v2**, one per adopted prompt version (screenshots in [screenshots/](screenshots/)). Setup: [build/build_guide.md](build/build_guide.md).
 

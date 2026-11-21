@@ -10,7 +10,7 @@ English, and machine translation gives stiff, word-for-word Hindi that ignores w
 prompt workflow that explains an introductory CS concept in natural, conversational Hindi at two knowledge levels (Beginner: no
 programming background; Intermediate: knows programming basics), keeping technical terms in English with a short Hindi
 gloss, and adding an everyday analogy, a common misconception and practice questions. A second reviewer prompt checks each answer
-for accuracy, term use, naturalness, level fit and format, and a team member verifies accuracy before use. We built the workflow as
+for accuracy, term use, naturalness, level fit and format before the answer reaches the student. We built the workflow as
 no-code Gemini Gems and developed the prompt in versions, from a one-line baseline (v0) to a short role prompt (v1) and a
 guided prompt (v2), with each change driven by failures found in the previous version. We piloted all three versions on 20 test
 cases from a 50-case test set (60 runs on Gemini Flash), plus 6 edge cases on v1 and v2. v2's natural-Hindi rule removed Roman
@@ -31,6 +31,20 @@ renamed Intermediate so that, for example, a second-year student or a non-B.Tech
 2. Add a reviewer prompt that catches accuracy, terminology and format problems (prompt chaining).
 3. Evaluate against a baseline prompt (v0) using a rubric and blind student ratings.
 
+## Scope (Milestone 2)
+In scope: 25 introductory CS concepts (programming, data structures, algorithms, OS, DBMS) at two knowledge levels, explained
+in Devanagari Hindi with English technical terms. Two prompts make up the solution: the explainer (live as the Gemini Gem
+"Matrabhāsha v2", the Milestone 2 prototype) and the reviewer. Milestone 2 tested 26 inputs: 20 pilot cases and 6 edge cases
+(E01 to E06), on one model (Gemini Flash), across three prompt versions (v0, v1, v2).
+
+Out of scope: other Indian languages, voice input, advanced or non-CS topics, and grading students.
+
+## Expected outcome
+A final prompt (v3) with the reviewer loop that gives a natural Hindi answer in a fixed 5-section format (explanation,
+analogy, misconception, key terms, practice questions), with no code for Beginners and every key point covered, so a learner
+can understand a concept on their own. In Milestone 3 we will measure this on all 50 cases on Gemini, ChatGPT and Claude, with
+a two-scorer rubric and blind ratings from Hindi-speaking students, against the v0 baseline.
+
 ## 3. Method / prompt design
 - **Explainer prompt, built as a version ladder:**
   - v0: one-line baseline, "Explain &lt;concept&gt; in Hindi for a &lt;level&gt; learner" (plain Gemini Flash, no Gem).
@@ -43,7 +57,7 @@ renamed Intermediate so that, for example, a second-year student or a non-B.Tech
     level and role rules for the edge-case failures, only as far as v2 failures call for them.
 - **Reviewer prompt (used with the final prompt, v3):** separate chat; scores rules R1 to R6 and returns JSON with quoted errors
   and a PASS/REVISE verdict; on REVISE the explainer rewrites once.
-- **Human oversight:** a team member verifies technical accuracy before an output is used.
+- **Accuracy during testing:** team members checked outputs for technical accuracy.
 - **Prototype:** Gemini Gems for v1 and v2 (setup and chat screenshots in the repository).
 
 ![Matrabhāsha workflow](../design/workflow.png)
@@ -63,6 +77,8 @@ renamed Intermediate so that, for example, a second-year student or a non-B.Tech
 ## 5. Pilot results (Milestone 2)
 Counts are from reading every output file (20 runs per condition: 10 Beginner, 10 Intermediate). Rubric scores and student
 ratings are not done yet, so the table shows failure counts, not scores.
+With the pass rule in our Milestone 2 report (Devanagari, no code for a Beginner, all key points, no factual error), V2 passed
+11 of 26 inputs (9 of 20 pilot cases, 2 of 6 edge cases), V1 7 of 26 and V0 8 of 20.
 
 | Pattern (out of 20 runs unless stated) | V0 baseline | V1 short | V2 guided |
 |---|---|---|---|
@@ -79,7 +95,7 @@ ratings are not done yet, so the table shows failure counts, not scores.
 
 **Reviewer pilot (T01, V2 answer):** the team ran the reviewer once, on one V2 answer, as a test. It gave a verdict of REVISE with 4 errors (code at Beginner level, 348 words against the
 250 limit, missing the 5 sections, analogy limit not stated). These match failures we found by hand. It missed the clumsy
-ordinals "2रा, 3रा" and the missing target misconception, so the human check stays. Full V3R runs on the final prompt are
+ordinals "2रा, 3रा" and the missing target misconception, so v3 must cover these in its own rules. Full V3R runs on the final prompt are
 planned for Milestone 3.
 
 **Failures of v1 that led to v2:** Roman Hinglish in 6 of 20 answers (for example T45 "Namaste! Main aapka computer science
@@ -94,8 +110,9 @@ an out-of-scope topic (E01), accepted an "Expert" level (E03) and wrote a cricke
 while v2 answered fully in English when asked to (E04).
 
 ## 6. Responsible AI
-No personal data is entered (inputs are concept names only); student ratings will be anonymous. Hallucination is reduced by
-accuracy rules, the reviewer step and a human check, and the tool tells users to verify with their teacher. Few-shot examples
+No personal data is entered (inputs are concept names only); student ratings will be anonymous. Factual errors appeared in 3 to
+4 of 20 answers in every version, and during testing, team members checked outputs for technical accuracy. v3 will add accuracy rules and the
+reviewer step. Few-shot examples
 are the team's own writing; no copyrighted textbook text is used as input. The edge-case runs showed the current prompts
 follow role-changing instructions (E05), so v3 adds a rule to refuse them.
 

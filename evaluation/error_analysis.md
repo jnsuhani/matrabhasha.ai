@@ -305,7 +305,7 @@ Output: `outputs/reviews/T01.md`. Log row: `V2R-T01`. The reviewer is meant for 
 
 The one revision (new chat, v2 Gem) removed the code and added an analogy limit ("हम इंसान दौड़ते हुए थक जाते हैं…"), 3 key terms, a misconception and 2 practice questions. It still has no separate explanation heading, and its misconception ("लूप हमेशा हमेशा के लिए चलता रहता है") is not the test-set one (condition checked only once). The reviewer also missed things we found by hand: the clumsy ordinals "2रा, 3रा" (it gave R3 Naturalness 5) and the missing target misconception.
 
-**What this supports:** the reviewer catches format, level and analogy problems reliably, which are exactly the rules being moved into v3. It is weaker on naturalness and on which misconception is addressed, so the human check stays. Full V3R runs on the final prompt are planned for M3.
+**What this supports:** the reviewer catches format, level and analogy problems reliably, which are exactly the rules being moved into v3. It is weaker on naturalness and on which misconception is addressed, so v3 must cover these in its own rules. During testing, team members checked outputs for technical accuracy. Full V3R runs on the final prompt are planned for M3.
 
 ## v3 failures (M3)
 | Test id | What went wrong | Rubric criterion | How often | Fix / limitation to report |
