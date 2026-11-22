@@ -1,8 +1,8 @@
 # Prompts: version ladder
 
 We improve the prompt step by step, and **each step must be justified by failures seen in real runs of the previous version.**
-There are four versions (v0 to v3). The guidelines don't ask for a fixed number; four is enough to show the iteration, and v3 is the
-final prompt.
+Three versions (v0, v1, v2) were run in Milestone 2 and are the versions counted in the Milestone 2 report; v2 is the final
+prompt for Milestone 2 (copy in `final/`). v3 is a draft for Milestone 3.
 
 | Version | File | What it adds | Status |
 |---|---|---|---|

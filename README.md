@@ -1,13 +1,28 @@
 # Matrabhāsha
 
-A prompt workflow that explains introductory computer science concepts in natural, conversational Hindi to Hindi-comfortable
-learners at two knowledge levels: **Beginner** (no programming background) and **Intermediate** (knows programming basics, wants
-technical depth), whatever their year or degree. Technical terms stay in English with a short Hindi gloss, and every answer includes an everyday
-analogy, a common misconception and practice questions. A second reviewer prompt checks each answer.
+A prompt workflow that explains introductory computer science concepts in natural, conversational Hindi (Devanagari) to
+Hindi-comfortable learners at two knowledge levels: **Beginner** (no programming background) and **Intermediate** (knows
+programming basics, wants technical depth), whatever their year or degree. Technical terms stay in English. A second reviewer
+prompt checks each answer. The final prompt (v3, Milestone 3) adds a fixed format with an everyday analogy, a common
+misconception and practice questions.
 
 Prompt Engineering mini-project, B.Tech CSE 5th semester, Bennett University. Problem Pool ID **C19** (Bilingual explainer).
 
-**Team SyntaxAI:** Suhani Jain (leader), Khushi Upadhyay, Amna Khan, Ashima Singh
+**Team SyntaxAI (PE-B65-11), batch B65-80, faculty Sonal Kukreja:** Suhani Jain (S24CSEU2709, leader), Khushi Upadhyay (S24CSEU1642),
+Amna Khan (S24CSEU1623), Ashima Singh (S24CSEU2720)
+
+## Links and Milestone 2 documents
+- **Prototype (Gemini Gem "Matrabhāsha v2"):** https://gemini.google.com/gem/1TlIzbCeMuz6TW7b8cdk342ahPaoP_hRO?usp=sharing
+- **Reel (135 s):** https://youtu.be/7ZjnFfg_D7c
+- **Milestone 2 report:** [docs/M2_PE-B65-11_Matrabhasha.pdf](docs/M2_PE-B65-11_Matrabhasha.pdf)
+- **Supporting document (synopsis):** [docs/SyntaxAI_Synopsis.pdf](docs/SyntaxAI_Synopsis.pdf)
+- **Final prompts:** [prompts/final/](prompts/final/) · **Changes since Milestone 1:** [CHANGELOG.md](CHANGELOG.md)
+
+## How to open and run it
+1. Open the prototype link above and sign in with any Google account.
+2. Type, for example, `Concept: Stack | Level: Beginner` (or `Level: Intermediate`).
+3. Optional reviewer step: open a new Gemini chat, paste [prompts/final/P2_reviewer.md](prompts/final/P2_reviewer.md) with the
+   concept, level and the Gem's answer filled in. On REVISE, send the error list back to the Gem with the one-line rewrite message.
 
 ![Workflow](design/workflow.png)
 
@@ -31,22 +46,23 @@ The prototype is built as Gemini Gems in the Gemini app, Everyday help (4 Hydrog
 ## Repository layout
 | Folder | Contents |
 |---|---|
-| `prompts/` | Prompt versions v0–v3 with version history, reviewer prompt, few-shot examples |
-| `test-set/` | Test cases and edge cases |
+| `prompts/` | Prompt versions v0–v2 (run in M2), v3 draft, reviewer prompt, few-shot examples; `final/` = the two final prompts |
+| `test-set/` | Test inputs: 50 test cases and 6 edge cases (saved outputs are in `outputs/`) |
 | `outputs/` | Raw model outputs and reviewer JSON |
 | `evaluation/` | Rubric, scoring sheets, experiment log, student rating form |
 | `design/` | Design description and diagrams |
 | `build/` | Prototype build guide and demo plan |
-| `docs/` | Synopsis, video script, Milestone 2 plan |
+| `docs/` | Milestone 2 report and synopsis (PDF and source) |
 | `screenshots/` | Gem setup and demo evidence |
 
 Contribution record: [CONTRIBUTIONS.md](CONTRIBUTIONS.md).
 
 ## Status
-Milestone 1 submitted. Milestone 2 (due 2 Nov 2026): v0, v1 and v2 run on the 20 pilot cases (60 runs, all logged in
-[evaluation/experiment_log.csv](evaluation/experiment_log.csv)), edge cases E01 to E06 run on v1 and v2, error analysis written,
-reviewer pilot-tested once on V2 T01, synopsis filled from these runs. Team rubric scores and blind student ratings are not done yet.
-Milestone 3 (due 1 Dec 2026): v3, reviewer loop (V3R), full 50 cases on three models.
+Milestone 1 submitted. Milestone 2 (submitted 22 Nov 2026): v0, v1 and v2 run on the 20 pilot cases (60 runs) and edge cases E01
+to E06 on v1 and v2 (12 runs), plus one reviewer run on T01: 73 runs in
+[evaluation/experiment_log.csv](evaluation/experiment_log.csv), error analysis in
+[evaluation/error_analysis.md](evaluation/error_analysis.md). v2 passed 11 of 26 test inputs. Team rubric scores and student
+ratings are planned for Milestone 3 (due 1 Dec 2026), with v3, the reviewer loop and the full 50 cases on three models.
 All results in this repository come from the team's own runs.
 
 ## References

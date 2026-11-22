@@ -4,6 +4,7 @@
 - Milestone 2 report rebuilt in the official 7-section format: `docs/M2_PE-B65-11_Matrabhasha.pdf`.
 - Synopsis shortened to 2 pages: `docs/SyntaxAI_Synopsis.pdf`.
 - Added `prompts/final/` with the two final prompts (P1 Explainer = v2, P2 Reviewer).
+- Removed the old report and synopsis PDFs and outdated planning files (`docs/milestone2_plan.md`, `docs/repo_layout.md`, `docs/video_script.md`); README now lists the prototype, reel and report links; `docs/synopsis.md` matches the 2-page synopsis.
 
 ## 2026-11-21
 - Gemini app model label updated to Everyday help (4 Hydrogen); logged runs stay Gemini Flash.
