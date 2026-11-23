@@ -6,7 +6,7 @@ pilot cases under V0, V1 and V2 and logged them.
 
 | Member | Enrollment no. | Role | Main tasks | Contribution (%) |
 |---|---|---|---|---|
-| Suhani Jain (leader) | S24CSEU2709 | Prompt design, prototype, repository, reel editing | Prompts v0–v2 and reviewer; Gems v1/v2; runs T01–T09; reviewer run on T01; recorded, edited and uploaded the reel | 25 |
+| Suhani Jain (leader) | S24CSEU2709 | Prompt design, prototype, repository, reel editing | Prompts v0–v2 and reviewer; Gems v1/v2; runs T01–T09; reviewer run on T01; edited the reel | 25 |
 | Khushi Upadhyay | S24CSEU1642 | Syllabus check, testing | Syllabus check of the test set; runs T10–T22 | 25 |
 | Amna Khan | S24CSEU1623 | Testing, reel | Runs T42–T50; reel voice-over (with Ashima) | 25 |
 | Ashima Singh | S24CSEU2720 | Edge cases, testing, slides, reel | Runs T29–T41; edge cases E01–E06; presentation slides; reel voice-over (with Amna) | 25 |
@@ -21,4 +21,4 @@ Add a row whenever you do something for the project. Commit your own work from y
 |---|---|---|---|
 | 2026-10-19 | Suhani Jain | Created repo; added Milestone 2 drafts (prompts, test set, rubric, design, build guide, synopsis and video drafts) prepared with AI assistance (Claude) | all |
 | 2026-10-31 to 2026-11-01 | All four members | v0, v1, v2 runs on own 5 pilot cases; Ashima ran E01–E06 on v1 and v2; Suhani ran the reviewer on T01 | outputs/, evaluation/experiment_log.csv |
-| 2026-11-22 | Suhani Jain | Milestone 2 report and synopsis in the official format; reel recorded, edited and uploaded (voice-over by Amna and Ashima) | docs/, CHANGELOG.md |
+| 2026-11-22 | Suhani Jain | Milestone 2 report and synopsis in the official format; reel (edited by Suhani, voice-over by Amna and Ashima) uploaded | docs/, CHANGELOG.md |
