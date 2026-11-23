@@ -9,7 +9,7 @@ pilot cases under V0, V1 and V2 and logged them.
 | Suhani Jain (leader) | S24CSEU2709 | Prompt design, prototype, repository, reel editing | Prompts v0–v2 and reviewer; Gems v1/v2; runs T01–T09; reviewer run on T01; edited the reel | 25 |
 | Khushi Upadhyay | S24CSEU1642 | Syllabus check, testing | Syllabus check of the test set; runs T10–T22 | 25 |
 | Amna Khan | S24CSEU1623 | Testing, reel | Runs T42–T50; reel voice-over (with Ashima) | 25 |
-| Ashima Singh | S24CSEU2720 | Edge cases, testing, slides, reel | Runs T29–T41; edge cases E01–E06; presentation slides; reel voice-over (with Amna) | 25 |
+| Ashima Singh | S24CSEU2720 | Edge cases, testing, reel | Runs T29–T41; edge cases E01–E06; reel voice-over (with Amna) | 25 |
 
 The error analysis and the synopsis were compiled from everyone's logged runs. Who ran each case is in the `member` column of
 `evaluation/experiment_log.csv`.
